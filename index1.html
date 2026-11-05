@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaushal Kushwaha — IBM MQ &amp; Middleware Integration Engineer</title>
+<meta name="description" content="Kaushal Kushwaha — IBM MQ Developer &amp; Middleware Integration Engineer at Tata Consultancy Services. M.Tech AI &amp; Data Science, IIT Jodhpur. 99.9% SLA, 1M+ messages/day across BFSI production systems.">
+<meta property="og:title" content="Kaushal Kushwaha — IBM MQ &amp; Middleware Integration Engineer">
+<meta property="og:description" content="IBM MQ 9.2 · IBM ACE v12 / IIB v10 · Apache Kafka · GCP · IIT Jodhpur (M.Tech, AI &amp; Data Science)">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kk007-ai.github.io/kaushalforge/">
+<meta property="og:image" content="https://kk007-ai.github.io/kaushalforge/og-banner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kk007-ai.github.io/kaushalforge/og-banner.png">
+<meta name="twitter:site" content="@kaushal_iitj">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kk007-ai.github.io/kaushalforge/">
+<meta name="theme-color" content="#0a0d12">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0d12'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' fill='%232fe7c2' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kaushal Kushwaha",
+  "jobTitle": "Software Engineer — Middleware & Integration",
+  "worksFor": { "@type": "Organization", "name": "Tata Consultancy Services" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Indian Institute of Technology Jodhpur" },
+    { "@type": "CollegeOrUniversity", "name": "IET, MJP Rohilkhand University" }
+  ],
+  "email": "mailto:kaushal.iitj29@gmail.com",
+  "url": "https://kk007-ai.github.io/kaushalforge/",
+  "sameAs": [
+    "https://www.linkedin.com/in/kaushal-kushwaha-5a250a258",
+    "https://github.com/kk007-ai",
+    "https://twitter.com/kaushal_iitj",
+    "https://www.instagram.com/kaushal.iitj/"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg: #0a0d12;
+  --bg-1: #0d1117;
+  --surface: #12161d;
+  --surface-2: #171c25;
+  --surface-glass: rgba(23,28,37,0.55);
+  --border: #232a35;
+  --border-strong: #333c4a;
+  --text: #eef1f6;
+  --muted: #98a2b3;
+  --faint: #5c6472;
+
+  --accent: #2fe7c2;
+  --accent-ink: #04140f;
+  --accent-dim: rgba(47,231,194,0.12);
+  --accent-line: rgba(47,231,194,0.35);
+
+  --warn: #ffb454;
+  --warn-dim: rgba(255,180,84,0.12);
+
+  --info: #9b8cff;
+  --info-dim: rgba(155,140,255,0.12);
+
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --maxw: 1180px;
+
+  --font-display: 'Space Grotesk', ui-sans-serif, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --ease: cubic-bezier(.16,.84,.32,1);
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+::selection{ background: var(--accent); color: var(--accent-ink); }
+::-webkit-scrollbar{ width: 10px; height:10px; }
+::-webkit-scrollbar-track{ background: var(--bg); }
+::-webkit-scrollbar-thumb{ background: var(--border-strong); border-radius: 10px; border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover{ background: var(--accent); }
+*{ scrollbar-width: thin; scrollbar-color: var(--border-strong) var(--bg); }
+
+body{
+  margin:0; background: var(--bg); color: var(--text); font-family: var(--font-body);
+  line-height: 1.65; -webkit-font-smoothing: antialiased; position: relative; overflow-x: hidden;
+}
+body.custom-cursor-active, body.custom-cursor-active a, body.custom-cursor-active button{ cursor: none; }
+
+a{ color: inherit; text-decoration: none; }
+ul{ list-style:none; margin:0; padding:0; }
+img{ max-width:100%; display:block; }
+button{ font: inherit; }
+:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.skip-link{
+  position:fixed; top:-100px; left: 16px; z-index:1000; background: var(--accent); color: var(--accent-ink);
+  padding: 10px 18px; border-radius: 8px; font-family: var(--font-mono); font-size:13px; transition: top .2s;
+}
+.skip-link:focus{ top: 16px; }
+
+.wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+.eyebrow{
+  font-family: var(--font-mono); font-size: 12.5px; color: var(--accent); letter-spacing: 0.03em;
+  display:inline-flex; align-items:center; gap:8px; margin-bottom: 18px; text-transform: uppercase;
+}
+.eyebrow::before{ content:''; width:16px; height:1px; background: var(--accent); display:inline-block; }
+h1,h2,h3{ font-family: var(--font-display); font-weight: 600; margin:0; letter-spacing: -0.01em; }
+h2{ font-size: clamp(28px, 3.6vw, 42px); margin-bottom: 16px; }
+h2 em{ font-style:normal; background: linear-gradient(100deg, var(--accent), var(--info) 90%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.lede{ color: var(--muted); font-size: 17px; max-width: 640px; margin-bottom: 46px; }
+section{ padding: 108px 0; position:relative; }
+
+/* ambient */
+.bg-mesh{
+  position: fixed; inset:0; z-index:-3; pointer-events:none;
+  background:
+    radial-gradient(650px 500px at 12% -5%, rgba(47,231,194,0.08), transparent 60%),
+    radial-gradient(700px 550px at 105% 15%, rgba(155,140,255,0.07), transparent 60%),
+    radial-gradient(600px 500px at 50% 110%, rgba(255,180,84,0.05), transparent 60%),
+    var(--bg);
+}
+.bg-grain{ position: fixed; inset:0; z-index:-1; pointer-events:none; opacity: 0.035; mix-blend-mode: overlay; }
+
+/* ---------- BOOT LOADER ---------- */
+#loader{
+  position:fixed; inset:0; z-index:900; background: var(--bg); display:flex; align-items:center; justify-content:center;
+  transition: opacity .5s ease, visibility .5s ease;
+}
+#loader.hidden{ opacity:0; visibility:hidden; pointer-events:none; }
+.loader-box{ font-family: var(--font-mono); font-size: 13.5px; color: var(--muted); width: min(360px, 80vw); }
+.loader-logo{ font-family: var(--font-display); font-size: 22px; color: var(--text); margin-bottom: 22px; font-weight:700; }
+.loader-logo span{ color: var(--accent); }
+.loader-line{ opacity:0; margin-bottom: 8px; animation: loaderIn .4s ease forwards; }
+.loader-line b{ color: var(--accent); }
+.loader-bar{ height:2px; background: var(--border); border-radius:2px; margin-top:16px; overflow:hidden; }
+.loader-bar i{ display:block; height:100%; width:0%; background: linear-gradient(90deg,var(--accent),var(--info)); animation: loaderBar 1.4s var(--ease) forwards; }
+@keyframes loaderIn{ to{ opacity:1; } }
+@keyframes loaderBar{ to{ width:100%; } }
+
+/* ---------- CUSTOM CURSOR ---------- */
+#cursorDot, #cursorRing{ position:fixed; top:0; left:0; border-radius:50%; pointer-events:none; z-index:950; transform: translate(-50%,-50%); }
+#cursorDot{ width:6px; height:6px; background: var(--accent); }
+#cursorRing{ width:34px; height:34px; border:1px solid var(--accent-line); transition: width .2s, height .2s, border-color .2s, background .2s; }
+#cursorRing.hover{ width:52px; height:52px; background: var(--accent-dim); border-color: var(--accent); }
+@media (hover:none){ #cursorDot, #cursorRing{ display:none; } }
+
+/* ---------- CURSOR SPOTLIGHT ---------- */
+#cursorSpotlight{
+  position:fixed; inset:0; z-index:2; pointer-events:none;
+  background: radial-gradient(560px circle at var(--spot-x,50%) var(--spot-y,50%), rgba(47,231,194,0.09), transparent 62%);
+  opacity:0; transition: opacity .35s ease;
+}
+#cursorSpotlight.active{ opacity:1; }
+@media (hover:none){ #cursorSpotlight{ display:none; } }
+@media (prefers-reduced-motion: reduce){ #cursorSpotlight{ display:none; } }
+
+/* ---------- CARD TILT (3D perspective hover) ---------- */
+.tilt{ position:relative; transform-style: preserve-3d; will-change: transform; transition: transform .35s cubic-bezier(.16,.84,.32,1), box-shadow .35s ease; }
+.tilt:hover{ box-shadow: 0 24px 60px -20px rgba(0,0,0,0.55); }
+.tilt::after{
+  content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0;
+  background: radial-gradient(340px circle at var(--tilt-px,50%) var(--tilt-py,50%), rgba(47,231,194,0.14), transparent 60%);
+  transition: opacity .3s ease;
+}
+.tilt:hover::after{ opacity:1; }
+@media (prefers-reduced-motion: reduce){ .tilt{ transform:none !important; } .tilt::after{ display:none; } }
+@media (hover:none){ .tilt{ transform:none !important; } .tilt::after{ display:none; } }
+
+/* scroll progress + story rail */
+#scrollProgress{ position:fixed; top:0; left:0; height:2px; background: linear-gradient(90deg, var(--accent), var(--info)); z-index:300; width:0%; }
+#storyRail{ position:fixed; right: 22px; top:50%; transform: translateY(-50%); z-index: 150; display:flex; flex-direction:column; gap:18px; }
+#storyRail .rail-stage{ display:flex; align-items:center; gap:10px; justify-content:flex-end; opacity:.4; transition: opacity .3s; }
+#storyRail .rail-stage.active{ opacity:1; }
+#storyRail .rail-label{ font-family: var(--font-mono); font-size:10.5px; color: var(--muted); white-space:nowrap; }
+#storyRail .rail-dot{ width:7px; height:7px; border-radius:50%; background: var(--border-strong); }
+#storyRail .rail-stage.active .rail-dot{ background: var(--accent); box-shadow: 0 0 0 4px var(--accent-dim); }
+@media (max-width: 1180px){ #storyRail{ display:none; } }
+
+/* ---------- NAV ---------- */
+header.nav{ position: fixed; top:0; left:0; right:0; z-index: 200; background: rgba(10,13,18,0.72); backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid var(--border); }
+.nav-inner{ max-width: var(--maxw); margin:0 auto; padding: 14px 28px; display:flex; align-items:center; justify-content: space-between; gap: 20px; }
+.logo{ font-family: var(--font-display); font-weight:700; font-size:16px; color: var(--text); flex-shrink:0; }
+.logo span{ color: var(--accent); }
+nav.links{ flex:1; display:flex; justify-content:center; }
+nav.links ul{ display:flex; gap: 24px; }
+nav.links a{ font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); transition: color .15s; }
+nav.links a:hover{ color: var(--accent); }
+.nav-right{ display:flex; align-items:center; gap: 10px; flex-shrink:0; }
+.kbtn{ font-family: var(--font-mono); font-size: 12px; color: var(--muted); border:1px solid var(--border-strong); background: var(--surface); padding: 7px 10px; border-radius: 7px; display:flex; align-items:center; gap:6px; cursor:pointer; transition: all .15s; }
+.kbtn:hover{ border-color: var(--accent); color: var(--accent); }
+.kbtn kbd{ font-family: var(--font-mono); background: var(--surface-2); border:1px solid var(--border-strong); border-radius:4px; padding:1px 5px; font-size:10.5px; }
+.nav-cta{ font-family: var(--font-mono); font-size: 12.5px; padding: 9px 16px; border-radius: 8px; background: var(--accent); color: var(--accent-ink); font-weight:600; transition: all .15s; }
+.nav-cta:hover{ transform: translateY(-1px); box-shadow: 0 8px 20px -6px rgba(47,231,194,0.5); }
+.nav-toggle{ display:none; background:none; border:none; color:var(--text); font-size:22px; cursor:pointer; }
+@media (max-width: 980px){ nav.links{ display:none; } .kbtn .kbtn-label{ display:none; } .nav-toggle{ display:block; } }
+.mobile-menu{ display:none; flex-direction:column; gap: 2px; padding: 8px 28px 20px; background: rgba(10,13,18,0.98); border-bottom: 1px solid var(--border); }
+.mobile-menu.open{ display:flex; }
+.mobile-menu a{ font-family: var(--font-mono); font-size:14px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border); }
+
+/* ---------- COMMAND PALETTE ---------- */
+#cmdOverlay{ position:fixed; inset:0; z-index:500; background: rgba(6,8,11,0.7); backdrop-filter: blur(4px); display:none; align-items:flex-start; justify-content:center; padding-top: 12vh; }
+#cmdOverlay.open{ display:flex; }
+.cmd-panel{ width: min(560px, 92vw); background: var(--surface); border:1px solid var(--border-strong); border-radius: var(--radius); box-shadow: 0 30px 80px -20px rgba(0,0,0,0.6); overflow:hidden; animation: cmdIn .18s var(--ease); }
+@keyframes cmdIn{ from{ opacity:0; transform: translateY(-8px) scale(.98); } to{ opacity:1; transform:none; } }
+.cmd-input-row{ display:flex; align-items:center; gap:10px; padding: 16px 18px; border-bottom:1px solid var(--border); }
+.cmd-input-row span{ color: var(--accent); font-family: var(--font-mono); }
+#cmdInput{ flex:1; background:none; border:none; outline:none; color: var(--text); font-family: var(--font-mono); font-size:15px; }
+#cmdInput::placeholder{ color: var(--faint); }
+.cmd-list{ max-height: 340px; overflow-y:auto; padding: 8px; }
+.cmd-item{ display:flex; align-items:center; justify-content:space-between; padding: 11px 12px; border-radius: 8px; cursor:pointer; font-family: var(--font-mono); font-size: 13.5px; color: var(--text); }
+.cmd-item.active, .cmd-item:hover{ background: var(--accent-dim); color: var(--accent); }
+.cmd-item span.tag{ color: var(--faint); font-size:11px; }
+.cmd-item.active span.tag, .cmd-item:hover span.tag{ color: var(--accent); opacity:.7; }
+.cmd-empty{ padding: 24px; text-align:center; color: var(--faint); font-family: var(--font-mono); font-size:13px; }
+
+/* ---------- HERO (3D) ---------- */
+.hero{ position:relative; min-height: 100vh; display:flex; align-items:center; padding: 140px 0 60px; overflow:hidden; }
+#heroCanvas{ position:absolute; inset:0; z-index:0; }
+.hero-overlay{ position:relative; z-index:2; }
+.hero::after{ content:''; position:absolute; inset:0; z-index:1; background: linear-gradient(100deg, var(--bg) 22%, rgba(10,13,18,0.55) 55%, rgba(10,13,18,0.15) 100%); pointer-events:none; }
+.status-pill{ display:inline-flex; align-items:center; gap:8px; font-family: var(--font-mono); font-size:12px; color: var(--accent); border:1px solid var(--accent-line); background: var(--accent-dim); padding: 6px 12px; border-radius: 999px; margin-bottom: 24px; }
+.status-dot{ width:7px; height:7px; border-radius:50%; background: var(--accent); box-shadow: 0 0 0 0 rgba(47,231,194,0.6); animation: pulse 1.8s infinite; }
+@keyframes pulse{ 0%{ box-shadow: 0 0 0 0 rgba(47,231,194,.55);} 70%{ box-shadow: 0 0 0 9px rgba(47,231,194,0);} 100%{ box-shadow: 0 0 0 0 rgba(47,231,194,0);} }
+.hero h1{ font-size: clamp(42px, 7vw, 76px); line-height:1.02; margin-bottom: 18px; max-width: 800px; }
+.hero h1 .word{ display:inline-block; overflow:hidden; vertical-align:top; }
+.hero h1 .word span{ display:inline-block; transform: translateY(110%); transition: transform .8s var(--ease); }
+.hero h1.in .word span{ transform: translateY(0); }
+.hero h1 .hl span{ background: linear-gradient(100deg, var(--accent), var(--info) 85%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.hero .role{ font-family: var(--font-mono); color: var(--muted); font-size: clamp(15px,1.8vw,18px); margin-bottom: 22px; min-height: 26px; }
+.role-typer{ color: var(--accent); }
+.role-cursor{ color: var(--accent); animation: blink 1s step-end infinite; }
+@keyframes blink{ 50%{ opacity:0; } }
+.hero .tagline{ color: var(--muted); max-width: 560px; margin-bottom: 30px; font-size: 16.5px; }
+.tag-row{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 34px; }
+.tag{ font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); border:1px solid var(--border); padding: 7px 13px; border-radius: 7px; background: rgba(18,22,29,0.6); backdrop-filter: blur(6px); }
+.btn-row{ display:flex; gap:14px; flex-wrap:wrap; }
+.btn{ font-family: var(--font-mono); font-size: 14px; padding: 13px 24px; border-radius: 9px; border: 1px solid var(--border-strong); transition: transform .15s var(--ease), box-shadow .15s, border-color .15s, color .15s; position:relative; display:inline-flex; align-items:center; gap:8px; }
+.btn-primary{ background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight:600; }
+.btn-primary:hover{ box-shadow: 0 12px 30px -10px rgba(47,231,194,0.55); }
+.btn-ghost{ color: var(--text); background: rgba(18,22,29,0.5); backdrop-filter: blur(6px); }
+.btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
+.scroll-cue{ position:absolute; bottom: 34px; left:50%; transform: translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:8px; color: var(--faint); font-family: var(--font-mono); font-size:11px; }
+
+/* ---------- HERO PORTRAIT ---------- */
+.hero-portrait{ display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom: 30px; }
+.hero-portrait-ring{
+  position:relative; width:112px; height:112px; border-radius:50%; padding:3px;
+  background: conic-gradient(from 180deg, var(--accent), var(--info), var(--warn), var(--accent));
+  animation: portraitSpin 7s linear infinite;
+}
+.hero-portrait-ring::before{ content:''; position:absolute; inset:-6px; border-radius:50%; background: radial-gradient(circle, rgba(47,231,194,0.18), transparent 70%); z-index:-1; }
+.hero-portrait-inner{ width:100%; height:100%; border-radius:50%; background: var(--bg); overflow:hidden; position:relative; }
+.hero-portrait-fallback{
+  width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+  font-family: var(--font-display); font-weight:700; font-size:34px; color: var(--accent);
+  background: var(--surface-2);
+}
+.hero-portrait-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition: opacity .4s ease; }
+.hero-portrait-img.loaded{ opacity:1; }
+.hero-portrait-tag{ font-family: var(--font-mono); font-size:11px; color: var(--faint); }
+@keyframes portraitSpin{ to{ transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce){ .hero-portrait-ring{ animation:none; } }
+@media (min-width: 980px){
+  .hero-portrait{ margin: 0 0 26px; }
+}
+.scroll-cue .chev{ width:16px; height:16px; border-right:1px solid var(--muted); border-bottom:1px solid var(--muted); transform: rotate(45deg); animation: chevBounce 1.8s infinite; }
+@keyframes chevBounce{ 0%,100%{ transform: rotate(45deg) translate(0,0); opacity:.5; } 50%{ transform: rotate(45deg) translate(4px,4px); opacity:1; } }
+
+/* ---------- TICKER ---------- */
+.ticker-wrap{ border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding: 22px 0; overflow:hidden; background: var(--surface); position:relative; z-index:2; }
+.ticker-track{ display:flex; gap: 48px; width:max-content; animation: ticker 32s linear infinite; }
+.ticker-track span{ font-family: var(--font-mono); font-size:13px; color: var(--faint); white-space:nowrap; display:flex; align-items:center; gap:10px; }
+.ticker-track span::before{ content:'◆'; color: var(--accent); font-size:9px; }
+@keyframes ticker{ from{ transform: translateX(0);} to{ transform: translateX(-50%);} }
+
+/* ---------- STORY SPINE (scroll-hijacked horizontal) ---------- */
+.story-section{ height: 500vh; position:relative; }
+.story-sticky{ position:sticky; top:0; height:100vh; overflow:hidden; display:flex; align-items:center; }
+.story-track{ display:flex; height:100%; will-change: transform; }
+.story-panel{ width:100vw; flex-shrink:0; display:flex; flex-direction:column; justify-content:center; padding: 0 10vw; max-width: 900px; }
+.story-num{ font-family: var(--font-display); font-size: 90px; color: var(--surface-2); font-weight:700; line-height:1; margin-bottom: -10px; }
+.story-panel h3{ font-size: clamp(28px,4vw,46px); margin: 10px 0 18px; max-width: 680px; }
+.story-panel p{ color: var(--muted); font-size: 17px; max-width: 620px; }
+.story-progress-track{ position:absolute; bottom:40px; left:10vw; right:10vw; height:3px; background: var(--border); border-radius:3px; z-index:3; }
+.story-progress-track i{ display:block; height:100%; width:0%; background: linear-gradient(90deg,var(--accent),var(--info)); border-radius:3px; }
+@media (prefers-reduced-motion: reduce){
+  .story-section{ height:auto; }
+  .story-sticky{ position:static; height:auto; display:block; }
+  .story-track{ display:block; }
+  .story-panel{ width:auto; max-width: var(--maxw); margin:0 auto; padding: 70px 28px; }
+  .story-progress-track{ display:none; }
+}
+@media (max-width: 780px){
+  .story-panel{ padding: 0 7vw; }
+  .story-num{ font-size: 60px; }
+}
+
+/* ---------- AI-INSPIRED "ASK KAUSHAL" WIDGET ---------- */
+#askToggle{
+  position: fixed; bottom: 26px; right: 26px; z-index: 400; width: 58px; height:58px; border-radius:50%;
+  background: linear-gradient(135deg, var(--accent), var(--info)); border:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; box-shadow: 0 12px 30px -8px rgba(47,231,194,0.5);
+  transition: transform .2s var(--ease);
+}
+#askToggle:hover{ transform: scale(1.06); }
+#askToggle svg{ width:24px; height:24px; stroke: var(--accent-ink); }
+#askPanel{
+  position: fixed; bottom: 96px; right: 26px; z-index: 400; width: min(360px, 90vw); max-height: 62vh;
+  background: var(--surface); border:1px solid var(--border-strong); border-radius: var(--radius-lg);
+  box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6); display:none; flex-direction:column; overflow:hidden;
+}
+#askPanel.open{ display:flex; animation: cmdIn .2s var(--ease); }
+.ask-head{ padding: 16px 18px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+.ask-head div b{ display:block; font-size:14px; }
+.ask-head div span{ font-family: var(--font-mono); font-size:11px; color: var(--muted); display:flex; align-items:center; gap:6px; }
+.ask-head div span::before{ content:''; width:6px; height:6px; border-radius:50%; background: var(--accent); }
+.ask-close{ background:none; border:none; color: var(--muted); font-size:18px; cursor:pointer; }
+.ask-body{ flex:1; overflow-y:auto; padding: 16px 18px; display:flex; flex-direction:column; gap:12px; }
+.ask-msg{ max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 13.6px; line-height:1.5; }
+.ask-msg.bot{ background: var(--surface-2); align-self:flex-start; border-bottom-left-radius:3px; }
+.ask-msg.user{ background: var(--accent-dim); color: var(--accent); align-self:flex-end; border-bottom-right-radius:3px; }
+.ask-typing{ display:flex; gap:4px; padding: 10px 14px; background: var(--surface-2); border-radius:12px; align-self:flex-start; width:fit-content; }
+.ask-typing i{ width:6px; height:6px; border-radius:50%; background: var(--muted); animation: typingDot 1.2s infinite; }
+.ask-typing i:nth-child(2){ animation-delay:.2s; } .ask-typing i:nth-child(3){ animation-delay:.4s; }
+@keyframes typingDot{ 0%,60%,100%{ opacity:.3; transform:translateY(0);} 30%{ opacity:1; transform:translateY(-3px);} }
+.ask-chips{ display:flex; flex-wrap:wrap; gap:8px; padding: 0 18px 14px; }
+.ask-chip{ font-family: var(--font-mono); font-size:11.5px; color: var(--accent); border:1px solid var(--accent-line); background: var(--accent-dim); padding:6px 11px; border-radius:999px; cursor:pointer; transition: all .15s; }
+.ask-chip:hover{ background: var(--accent); color: var(--accent-ink); }
+.ask-input-row{ display:flex; gap:8px; padding: 14px 18px; border-top:1px solid var(--border); }
+#askInput{ flex:1; background: var(--surface-2); border:1px solid var(--border); border-radius:8px; padding: 10px 12px; color: var(--text); font-family: var(--font-body); font-size:13.5px; outline:none; }
+#askInput:focus{ border-color: var(--accent); }
+.ask-send{ background: var(--accent); color: var(--accent-ink); border:none; border-radius:8px; padding: 0 16px; cursor:pointer; font-weight:600; }
+@media (max-width: 480px){ #askPanel{ right:12px; bottom:88px; width: calc(100vw - 24px); } #askToggle{ right:16px; } }
+</style>
+<style>
+/* live dashboard panel */
+.dash{
+  background: var(--surface-glass); backdrop-filter: blur(16px); border:1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 22px; box-shadow: 0 30px 60px -30px rgba(0,0,0,0.5);
+}
+.dash-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+.dash-head .dots{ display:flex; gap:6px; }
+.dash-head .dots i{ width:9px; height:9px; border-radius:50%; background: var(--border-strong); display:block; }
+.dash-title{ font-family: var(--font-mono); font-size:11.5px; color: var(--muted); letter-spacing:.04em; }
+.dash-badge{ font-family: var(--font-mono); font-size:9.5px; color: var(--warn); border:1px solid rgba(255,180,84,0.35); background: var(--warn-dim); padding:2px 7px; border-radius:5px; letter-spacing:.05em; margin-left:9px; vertical-align:1px; }
+.dash-caption{ font-family: var(--font-mono); font-size:11px; color: var(--faint); margin: -10px 0 18px; line-height:1.6; }
+.dash-actions .resolved-chip{ font-family: var(--font-mono); font-size:11px; color: var(--muted); margin-left:auto; }
+.dash-actions .resolved-chip b{ color: var(--accent); font-variant-numeric: tabular-nums; }
+.dash-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+.dash-card{ background: var(--surface); border:1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.dash-card .lbl{ font-family: var(--font-mono); font-size:10.5px; color: var(--faint); text-transform:uppercase; letter-spacing:.05em; margin-bottom:6px; }
+.dash-card .val{ font-family: var(--font-display); font-size:22px; font-weight:600; color: var(--text); }
+.dash-card .val.accent{ color: var(--accent); }
+.dash-card .val.warn{ color: var(--warn); }
+.dash-card svg.spark{ width:100%; height:26px; margin-top:6px; display:block; }
+.gauge-wrap{ grid-column: span 2; display:flex; align-items:center; gap:18px; background: var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px; }
+.gauge-wrap .glbl{ flex:1; }
+.gauge-wrap .glbl .lbl{ font-family: var(--font-mono); font-size:10.5px; color: var(--faint); text-transform:uppercase; margin-bottom:4px; }
+.gauge-wrap .glbl .sub{ color: var(--muted); font-size:12.5px; }
+.dash-actions{ display:flex; align-items:center; gap:12px; margin-top: 4px; }
+.dash-log{
+  margin-top:12px; font-family: var(--font-mono); font-size:11.5px; color: var(--muted);
+  background: var(--bg-1); border:1px solid var(--border); border-radius:8px; padding:10px 12px; min-height:64px;
+  display:flex; flex-direction:column; gap:4px; max-height:110px; overflow-y:auto;
+}
+.dash-log .log-line{ opacity:0; transform: translateY(3px); animation: logIn .3s ease forwards; }
+.dash-log .log-line b{ color: var(--accent); }
+.dash-log .log-line.warn b{ color: var(--warn); }
+
+/* ---------- OPS CONSOLE: system grid + uptime ---------- */
+.dash-uptime{ font-family: var(--font-mono); font-size:11px; color: var(--faint); display:flex; align-items:center; gap:6px; }
+.dash-uptime b{ color: var(--muted); font-weight:500; font-variant-numeric: tabular-nums; }
+.dash-head-right{ display:flex; align-items:center; gap:14px; }
+.sys-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr)); gap:10px; margin-bottom:16px; }
+.sys-card{ background: var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px 14px; transition: border-color .3s, background .3s; }
+.sys-top{ display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+.sys-dot{ width:8px; height:8px; border-radius:50%; background: var(--accent); flex-shrink:0; animation: sysPulse 2.2s infinite; }
+.sys-name{ font-family: var(--font-mono); font-size:11.5px; color: var(--text); }
+.sys-sub{ font-family: var(--font-mono); font-size:10px; color: var(--muted); margin-bottom:6px; }
+.sys-metric{ font-family: var(--font-mono); font-size:10px; color: var(--faint); display:flex; justify-content:space-between; }
+.sys-metric b{ color: var(--muted); font-weight:500; }
+.sys-status{ font-family: var(--font-mono); font-size:9.5px; color: var(--accent); text-transform:uppercase; letter-spacing:.04em; }
+@keyframes sysPulse{ 0%{ box-shadow: 0 0 0 0 rgba(47,231,194,.55);} 70%{ box-shadow: 0 0 0 7px rgba(47,231,194,0);} 100%{ box-shadow: 0 0 0 0 rgba(47,231,194,0);} }
+@keyframes sysPulseWarn{ 0%{ box-shadow: 0 0 0 0 rgba(255,180,84,.6);} 70%{ box-shadow: 0 0 0 8px rgba(255,180,84,0);} 100%{ box-shadow: 0 0 0 0 rgba(255,180,84,0);} }
+.sys-card.warn{ border-color: var(--warn); background: var(--warn-dim); }
+.sys-card.warn .sys-dot{ background: var(--warn); animation: sysPulseWarn 1s infinite; }
+.sys-card.warn .sys-status{ color: var(--warn); }
+@media (prefers-reduced-motion: reduce){ .sys-dot{ animation:none; } }
+@keyframes logIn{ to{ opacity:1; transform:none; } }
+.btn-mini{
+  font-family: var(--font-mono); font-size:12.5px; color: var(--accent); background: var(--accent-dim);
+  border:1px solid var(--accent-line); padding:9px 16px; border-radius:8px; cursor:pointer; transition: all .15s;
+}
+.btn-mini:hover{ background: var(--accent); color: var(--accent-ink); }
+.btn-mini:disabled{ opacity:.5; cursor:default; }
+
+/* ---------- STATS STRIP ---------- */
+.stats-strip{ padding: 54px 0; border-bottom: 1px solid var(--border); }
+.stats-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+.stat b{ display:block; font-family: var(--font-display); font-size: clamp(28px,3vw,38px); color: var(--accent); }
+.stat span{ color: var(--muted); font-size: 13px; font-family: var(--font-mono); }
+@media (max-width: 700px){ .stats-grid{ grid-template-columns: repeat(2,1fr); row-gap: 28px; } }
+
+/* shared card look */
+.card{
+  background: var(--surface); border:1px solid var(--border); border-radius: var(--radius);
+  transition: transform .15s var(--ease), border-color .18s, box-shadow .18s;
+}
+.card:hover{ border-color: var(--border-strong); }
+
+/* ---------- DEV PROFILE ---------- */
+.dev-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items:center; }
+.dev-copy p{ color: var(--muted); font-size: 15.5px; margin: 0 0 16px; }
+.dev-badges{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 26px; }
+.dev-badge{ font-family: var(--font-mono); font-size:12px; color: var(--warn); border:1px solid var(--border); background: var(--warn-dim); padding:6px 12px; border-radius:6px; }
+.dev-stats{ display:flex; flex-direction:column; gap:16px; }
+
+/* ---------- SOCIAL ICON THUMBNAILS ---------- */
+.contact-link .ic, .footer-social a .ic{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:38px; height:38px; border-radius:10px; flex-shrink:0;
+  background: var(--surface-2); border:1px solid var(--border-strong); color: var(--accent);
+  transition: background .18s, border-color .18s, transform .18s;
+}
+.contact-link:hover .ic{ background: var(--accent-dim); border-color: var(--accent); transform: translateY(-1px); }
+.contact-link .ic svg{ width:18px; height:18px; }
+.footer-social{ display:flex; align-items:center; gap:10px; }
+.footer-social a{ display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:9px; border:1px solid var(--border); color: var(--muted); transition: all .15s; }
+.footer-social a:hover{ color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
+.footer-social a svg{ width:16px; height:16px; }
+
+/* ---------- ARCHITECTURE IN MOTION ---------- */
+.arch-block{ margin-top: 64px; }
+.arch-block .eyebrow{ margin-bottom: 8px; }
+.arch-block h3{ font-family: var(--font-display); font-size: clamp(22px,2.8vw,30px); margin: 0 0 10px; }
+.arch-block .lede{ margin-bottom: 34px; }
+.arch-wrap{ background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-lg); padding: 8px; overflow:hidden; }
+.arch-svg{ width:100%; height:auto; display:block; }
+.arch-node-box{ fill: var(--surface-2); stroke: var(--border-strong); stroke-width:1.5; transition: stroke .25s, fill .25s; }
+.arch-node{ cursor:pointer; }
+.arch-node:hover .arch-node-box, .arch-node.active .arch-node-box{ stroke: var(--accent); fill: rgba(47,231,194,0.06); }
+.arch-node-title{ font-family: var(--font-display); font-weight:700; fill: var(--text); font-size:15px; }
+.arch-node-sub{ font-family: var(--font-mono); fill: var(--muted); font-size:10.5px; }
+.arch-node-tag{ font-family: var(--font-mono); fill: var(--accent); font-size:9.5px; letter-spacing: 0.04em; }
+.arch-path{ fill:none; stroke: var(--border-strong); stroke-width:1.6; }
+.arch-path.bridge{ stroke-dasharray: 4 5; opacity:.7; }
+.arch-flow-dot{ fill: var(--accent); filter: drop-shadow(0 0 4px rgba(47,231,194,0.9)); }
+.arch-flow-dot.bridge-dot{ fill: var(--info); filter: drop-shadow(0 0 4px rgba(155,140,255,0.9)); }
+.arch-legend{ display:flex; flex-wrap:wrap; gap: 14px 22px; padding: 16px 22px 22px; font-family: var(--font-mono); font-size:11.5px; color: var(--muted); }
+.arch-legend span{ display:inline-flex; align-items:center; gap:7px; }
+.arch-legend i{ width:8px; height:8px; border-radius:50%; display:inline-block; background: var(--accent); }
+.arch-legend i.bridge{ background: var(--info); }
+.arch-counter-wrap{ margin-left:auto; color: var(--text); }
+.arch-counter-wrap b{ color: var(--accent); font-size:13px; font-variant-numeric: tabular-nums; }
+@keyframes archNodePulse{ 0%{ stroke: var(--accent); fill: rgba(47,231,194,0.22); } 100%{ stroke: var(--border-strong); fill: var(--surface-2); } }
+.arch-node-box.pulse{ animation: archNodePulse .6s ease-out; }
+
+.arch-tabs{ display:flex; flex-wrap:wrap; gap:8px; margin: 26px 0 0; }
+.arch-tab{ font-family: var(--font-mono); font-size:12px; color: var(--muted); background: var(--surface-2); border:1px solid var(--border); padding: 9px 14px; border-radius: 8px; cursor:pointer; transition: all .15s; }
+.arch-tab.active, .arch-tab:hover{ color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
+.arch-panel{ display:none; background: var(--surface); border:1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin-top: 14px; }
+.arch-panel.active{ display:block; }
+.arch-panel h4{ font-family: var(--font-mono); font-size:13px; color: var(--accent); margin: 0 0 10px; }
+.arch-panel p{ color: var(--muted); font-size: 14.5px; margin: 0 0 10px; line-height:1.65; }
+.arch-panel .proj-tags{ margin-top:12px; }
+@media (max-width: 700px){ .arch-legend{ display:none; } }
+.dev-stats img{ width:100%; border-radius: var(--radius); border:1px solid var(--border); }
+@media (max-width: 900px){ .dev-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- ABOUT ---------- */
+.about-grid{ display:grid; grid-template-columns: 1.5fr 1fr; gap: 50px; }
+.about-grid p{ color: var(--muted); margin: 0 0 16px; font-size: 15.5px; }
+.about-grid strong{ color: var(--text); }
+.iit-card{
+  background: linear-gradient(160deg, var(--surface), var(--surface-2));
+  border: 1px solid var(--accent-line); border-radius: var(--radius-lg); padding: 28px;
+  box-shadow: 0 20px 50px -25px rgba(47,231,194,0.3); height: fit-content;
+}
+.iit-card .tag-badge{ font-family: var(--font-mono); font-size: 11px; color: var(--accent); border:1px solid var(--accent-line); padding: 4px 10px; border-radius: 999px; display:inline-block; margin-bottom: 14px; }
+.iit-card h3{ font-size: 21px; margin-bottom: 6px; font-family: var(--font-display); }
+.iit-card p{ color: var(--muted); font-size: 14px; margin: 4px 0; }
+.iit-card .divider{ height:1px; background: var(--border); margin: 16px 0; }
+@media (max-width: 900px){ .about-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- ACHIEVEMENTS ---------- */
+.ach-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ach-card{ padding: 28px; }
+.ach-card:hover{ transform: translateY(-4px); box-shadow: 0 20px 40px -25px rgba(0,0,0,0.5); }
+.ach-card .icon{ width:38px; height:38px; border-radius:10px; background: var(--accent-dim); display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.ach-card .icon svg{ width:19px; height:19px; stroke: var(--accent); }
+.ach-card.warn-tone .icon{ background: var(--warn-dim); }
+.ach-card.warn-tone .icon svg{ stroke: var(--warn); }
+.ach-card .num{ font-family: var(--font-display); font-size: 32px; color: var(--text); margin-bottom: 8px; display:block; }
+.ach-card h4{ font-family: var(--font-body); font-size: 15px; font-weight:600; margin: 0 0 8px; }
+.ach-card p{ color: var(--muted); font-size: 13.6px; margin:0; }
+@media (max-width: 860px){ .ach-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 560px){ .ach-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- EXPERIENCE ---------- */
+.exp-card{ padding: 32px; }
+.exp-top{ display:flex; justify-content:space-between; flex-wrap:wrap; gap: 10px; margin-bottom: 24px; }
+.exp-top h3{ font-size: 21px; font-family: var(--font-display); }
+.exp-top .company{ color: var(--accent); font-family: var(--font-mono); font-size: 13.5px; }
+.exp-top .dates{ font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+.exp-tabs{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 22px; }
+.exp-tab{
+  font-family: var(--font-mono); font-size:12.5px; color: var(--muted); background: var(--surface-2);
+  border:1px solid var(--border); padding:8px 14px; border-radius:999px; cursor:pointer; transition: all .15s;
+}
+.exp-tab:hover{ color: var(--text); }
+.exp-tab.active{ color: var(--accent-ink); background: var(--accent); border-color:var(--accent); font-weight:600; }
+.exp-panel{ display:none; }
+.exp-panel.active{ display:block; animation: fadeUp .3s ease; }
+@keyframes fadeUp{ from{ opacity:0; transform: translateY(8px);} to{ opacity:1; transform:none;} }
+.exp-panel ul{ display:flex; flex-direction:column; gap: 12px; }
+.exp-panel li{ color: var(--muted); font-size: 14.5px; padding-left: 20px; position:relative; }
+.exp-panel li::before{ content:'→'; position:absolute; left:0; color: var(--accent); }
+.exp-panel li strong{ color: var(--text); }
+.exp-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top: 26px; padding-top:22px; border-top:1px solid var(--border); }
+
+/* ---------- SKILLS ---------- */
+.skills-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 46px; }
+.skill-card{ padding: 20px 22px; }
+.skill-card h4{ font-family: var(--font-mono); font-size: 13px; color: var(--accent); margin: 0 0 10px; }
+.skill-card p{ color: var(--muted); font-size: 13.6px; margin:0; line-height:1.65; }
+@media (max-width: 780px){ .skills-grid{ grid-template-columns: 1fr; } }
+.prof-list{ display:flex; flex-direction:column; gap: 16px; }
+.prof-row{ display:grid; grid-template-columns: 190px 1fr 48px; align-items:center; gap: 14px; }
+.prof-row span:first-child{ font-family: var(--font-mono); font-size: 13px; color: var(--text); }
+.prof-row .bar{ height:6px; background: var(--surface-2); border-radius: 4px; overflow:hidden; }
+.prof-row .bar i{ display:block; height:100%; background: linear-gradient(90deg, var(--accent), var(--info)); border-radius: 4px; width:0; transition: width 1.1s var(--ease); }
+.prof-row .pct{ font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); text-align:right; }
+@media (max-width: 620px){ .prof-row{ grid-template-columns: 110px 1fr 40px; } }
+
+/* ---------- INSIGHTS ---------- */
+.insight-tabs{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 26px; }
+.insight-tab{
+  font-family: var(--font-mono); font-size:13px; color: var(--muted); background: var(--surface);
+  border:1px solid var(--border); padding:9px 16px; border-radius:999px; cursor:pointer; transition: all .15s;
+}
+.insight-tab:hover{ color: var(--text); border-color: var(--border-strong); }
+.insight-tab.active{ color: var(--accent-ink); background: var(--accent); border-color: var(--accent); font-weight:600; }
+.insight-panel{ display:none; padding: 30px; }
+.insight-panel.active{ display:block; animation: fadeUp .3s ease; }
+.insight-panel h4{ font-size:18px; margin: 0 0 12px; font-family: var(--font-display); color: var(--text); }
+.insight-panel p{ color: var(--muted); font-size:14.8px; margin: 0 0 10px; }
+.insight-panel .insight-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+
+/* ---------- CERTIFICATIONS ---------- */
+.cert-group-title{ font-family: var(--font-mono); font-size: 13px; color: var(--muted); margin: 0 0 16px; text-transform: uppercase; letter-spacing: .04em; }
+.cert-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 40px; }
+.cert-card{ display:flex; gap: 14px; align-items:flex-start; padding: 16px 18px; }
+.cert-icon{
+  flex-shrink:0; width: 36px; height:36px; border-radius:9px; background: var(--accent-dim);
+  color: var(--accent); font-family: var(--font-mono); font-size: 13px; display:flex; align-items:center; justify-content:center;
+  border: 1px solid var(--border);
+}
+.cert-card h5{ font-size: 14.5px; margin: 0 0 4px; font-weight:600; }
+.cert-card span{ color: var(--muted); font-size: 12.5px; font-family: var(--font-mono); }
+.cert-card h5 em{ font-style:normal; color: var(--faint); font-size:12px; margin-left:4px; transition: color .15s, transform .15s; display:inline-block; }
+.cert-card:hover{ border-color: var(--accent); }
+.cert-card:hover h5 em{ color: var(--accent); transform: translate(2px,-2px); }
+@media (max-width: 780px){ .cert-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- PROJECTS ---------- */
+.proj-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.proj-card{ padding: 26px; display:flex; flex-direction:column; }
+.proj-card:hover{ transform: translateY(-4px); }
+.proj-glyph{ width:40px; height:40px; border-radius:10px; background: var(--info-dim); display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.proj-glyph svg{ width:20px; height:20px; stroke: var(--info); }
+.proj-cat{ font-family: var(--font-mono); font-size: 11.5px; color: var(--warn); margin-bottom: 10px; text-transform:uppercase; letter-spacing:.03em; }
+.proj-card h4{ font-size: 18px; font-family: var(--font-display); margin: 0 0 10px; }
+.proj-card p{ color: var(--muted); font-size: 14px; margin: 0 0 18px; flex-grow:1; }
+.proj-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px; }
+.proj-tag{ font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); border:1px solid var(--border); padding: 4px 9px; border-radius: 5px; }
+.proj-status{ font-family: var(--font-mono); font-size: 12px; color: var(--faint); }
+@media (max-width: 780px){ .proj-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- EDUCATION ---------- */
+.edu-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.edu-grid.edu-grid-2{ grid-template-columns: repeat(2, 1fr); max-width: 780px; }
+.edu-card{ padding: 24px; }
+.edu-card.highlight{ border-color: var(--accent-line); background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+.edu-card .badge{ font-family: var(--font-mono); font-size: 11px; color: var(--accent); border:1px solid var(--accent-line); padding:3px 9px; border-radius:999px; display:inline-block; margin-bottom: 14px; }
+.edu-card h4{ font-size: 16.5px; margin: 0 0 6px; font-family: var(--font-display); }
+.edu-card p{ color: var(--muted); font-size: 13.6px; margin: 3px 0; }
+@media (max-width: 860px){ .edu-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- CONTACT ---------- */
+.contact-wrap{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items:center; }
+.contact-links{ display:flex; flex-direction:column; gap:14px; }
+.contact-link{ display:flex; align-items:center; gap:14px; padding: 16px 20px; transition: border-color .15s, transform .15s; }
+.contact-link:hover{ border-color: var(--accent); transform: translateX(4px); }
+.contact-link .ic{ font-family: var(--font-mono); color: var(--accent); font-size: 15px; width:22px; }
+.contact-link strong{ display:block; font-size: 14px; }
+.contact-link span{ color: var(--muted); font-size: 12.8px; }
+.contact-link-main{ display:flex; align-items:center; gap:14px; flex:1; min-width:0; }
+.copy-btn{
+  font-family: var(--font-mono); font-size:11px; color: var(--muted); border:1px solid var(--border);
+  background:transparent; padding:7px 12px; border-radius:6px; cursor:pointer; transition: all .15s; flex-shrink:0;
+}
+.copy-btn:hover{ color: var(--accent); border-color: var(--accent); }
+.copy-btn.copied{ color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
+.contact-panel{ padding: 32px; }
+.contact-panel h3{ font-size: 20px; margin-bottom: 10px; font-family: var(--font-display); }
+.contact-panel p{ color: var(--muted); font-size: 14.5px; margin-bottom: 24px; }
+@media (max-width: 900px){ .contact-wrap{ grid-template-columns: 1fr; } }
+
+footer{ padding: 44px 0; border-top: 1px solid var(--border); }
+.footer-inner{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: 12px; }
+.footer-inner .logo{ font-size: 14px; }
+.footer-inner p{ color: var(--faint); font-size: 12.5px; margin:0; font-family: var(--font-mono); }
+.footer-social{ display:flex; gap: 18px; }
+.footer-social a{ font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); transition: color .15s; }
+.footer-social a:hover{ color: var(--accent); }
+
+.btn-mini{
+  font-family: var(--font-mono); font-size:12.5px; color: var(--accent); background: var(--accent-dim);
+  border:1px solid var(--accent-line); padding:9px 16px; border-radius:8px; cursor:pointer; transition: all .15s;
+}
+.btn-mini:hover{ background: var(--accent); color: var(--accent-ink); }
+.btn-mini:disabled{ opacity:.5; cursor:default; }
+
+.reveal{ opacity:0; transform: translateY(20px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.in{ opacity:1; transform: translateY(0); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="bg-mesh"></div>
+<svg class="bg-grain" width="100%" height="100%">
+  <filter id="grainF"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+  <rect width="100%" height="100%" filter="url(#grainF)"/>
+</svg>
+
+<div id="loader" role="status" aria-live="polite">
+  <div class="loader-box">
+    <div class="loader-logo">kaushal<span>://</span>forge</div>
+    <div class="loader-line" style="animation-delay:.1s">&gt; initializing queue manager<b>...</b></div>
+    <div class="loader-line" style="animation-delay:.5s">&gt; establishing secure channel<b>...</b></div>
+    <div class="loader-line" style="animation-delay:.9s">&gt; system <b>ready</b></div>
+    <div class="loader-bar"><i></i></div>
+  </div>
+</div>
+
+<div id="cursorDot" aria-hidden="true"></div>
+<div id="cursorRing" aria-hidden="true"></div>
+<div id="cursorSpotlight" aria-hidden="true"></div>
+<div id="scrollProgress"></div>
+
+<nav id="storyRail" aria-label="Story progress">
+  <div class="rail-stage" data-stage-ref="produce"><span class="rail-label">01 PRODUCE</span><span class="rail-dot"></span></div>
+  <div class="rail-stage" data-stage-ref="queue"><span class="rail-label">02 QUEUE</span><span class="rail-dot"></span></div>
+  <div class="rail-stage" data-stage-ref="transform"><span class="rail-label">03 TRANSFORM</span><span class="rail-dot"></span></div>
+  <div class="rail-stage" data-stage-ref="route"><span class="rail-label">04 ROUTE</span><span class="rail-dot"></span></div>
+  <div class="rail-stage" data-stage-ref="deliver"><span class="rail-label">05 DELIVER</span><span class="rail-dot"></span></div>
+</nav>
+
+<!-- COMMAND PALETTE -->
+<div id="cmdOverlay">
+  <div class="cmd-panel">
+    <div class="cmd-input-row">
+      <span>⌘</span>
+      <input id="cmdInput" type="text" placeholder="Jump to a section or run a command…" autocomplete="off">
+      <span style="color:var(--faint); font-size:11px;">ESC</span>
+    </div>
+    <div class="cmd-list" id="cmdList"></div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#hero">kaushal<span>://</span>forge</a>
+    <nav class="links">
+      <ul>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#dev-profile">Developer</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button class="kbtn" id="cmdTrigger" type="button"><span class="kbtn-label">Search</span> <kbd>⌘K</kbd></button>
+      <a class="nav-cta" href="mailto:kaushal.iitj29@gmail.com">Hire Me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#story">Story</a>
+    <a href="#dev-profile">Developer</a>
+    <a href="#about">About</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#insights">Insights</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <a href="mailto:kaushal.iitj29@gmail.com">Hire Me</a>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="wrap hero-overlay">
+    <div class="hero-portrait">
+      <div class="hero-portrait-ring">
+        <div class="hero-portrait-inner">
+          <div class="hero-portrait-fallback" id="heroPortraitFallback">KK</div>
+          <img class="hero-portrait-img" id="heroPortraitImg" src="assets/kaushal-photo.jpg" alt="Kaushal Kushwaha"
+               onload="this.classList.add('loaded'); document.getElementById('heroPortraitFallback').style.display='none';"
+               onerror="this.style.display='none';">
+        </div>
+      </div>
+      <span class="hero-portrait-tag">~/profile.jpg</span>
+    </div>
+    <div class="status-pill"><span class="status-dot"></span> QMGR STATUS: OPEN TO OPPORTUNITIES</div>
+    <h1 id="heroHeading"><span class="word"><span>Kaushal</span></span> <span class="word hl"><span>Kushwaha</span></span></h1>
+    <p class="role">I am <span id="roleTyper" class="role-typer">IBM MQ Developer</span><span class="role-cursor">|</span></p>
+    <p class="tagline">I build the messaging infrastructure that BFSI systems can't afford to drop — queue managers, integration flows, and monitoring that hold at 99.9% SLA under 1M+ messages a day.</p>
+    <div class="tag-row">
+      <span class="tag">IBM MQ 9.2</span>
+      <span class="tag">IBM ACE v12 / IIB v10</span>
+      <span class="tag">Apache Kafka</span>
+      <span class="tag">GCP · AWS</span>
+      <span class="tag">IIT Jodhpur — M.Tech</span>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-primary magnetic" href="mailto:kaushal.iitj29@gmail.com">Get In Touch</a>
+      <a class="btn btn-ghost magnetic" href="https://www.linkedin.com/in/kaushal-kushwaha-5a250a258" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn btn-ghost magnetic" href="resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>SCROLL TO BEGIN THE JOURNEY</span><span class="chev"></span></div>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>IBM MQ 9.2</span><span>IBM ACE v12</span><span>IBM IIB v10</span><span>Apache Kafka</span><span>Google Cloud Platform</span>
+    <span>AWS</span><span>Kubernetes</span><span>Red Hat OpenShift</span><span>Jenkins CI/CD</span><span>Python</span><span>RHEL</span>
+    <span>IBM MQ 9.2</span><span>IBM ACE v12</span><span>IBM IIB v10</span><span>Apache Kafka</span><span>Google Cloud Platform</span>
+    <span>AWS</span><span>Kubernetes</span><span>Red Hat OpenShift</span><span>Jenkins CI/CD</span><span>Python</span><span>RHEL</span>
+  </div>
+</div>
+
+
+<!-- STATS STRIP -->
+<section class="stats-strip">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat"><b data-count="4" data-suffix="+">0</b><span>Years in Middleware Engineering</span></div>
+      <div class="stat"><b data-count="99.9" data-suffix="%">0</b><span>Production SLA Compliance</span></div>
+      <div class="stat"><b data-count="1" data-prefix="&gt;" data-suffix="M+">0</b><span>Messages Processed / Day</span></div>
+      <div class="stat"><b data-count="12" data-suffix="+">0</b><span>BFSI Enterprise Applications</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY SPINE: career told as a message's journey -->
+<section id="story" class="story-section" aria-label="Career story, told as a message's journey through a distributed system">
+  <div class="story-sticky">
+    <div class="story-track" id="storyTrack">
+
+      <div class="story-panel" data-stage="produce">
+        <span class="story-num">01</span>
+        <span class="eyebrow">PRODUCE · Origins</span>
+        <h3>Every message starts somewhere.</h3>
+        <p>Mine started with a B.Tech in Electrical Engineering — a foundation in signals, systems, and how things actually work underneath. That systems-first instinct is what pulled me toward enterprise middleware instead of pure software development.</p>
+      </div>
+
+      <div class="story-panel" data-stage="queue">
+        <span class="story-num">02</span>
+        <span class="eyebrow">QUEUE · 4+ Years at TCS</span>
+        <h3>Where messages wait, nothing can be lost.</h3>
+        <p>Four years administering IBM MQ 9.2 queue managers for BFSI production systems taught me that reliability isn't a feature — it's the whole job. 99.9% SLA compliance, zero data loss, 1M+ messages a day, across 12+ enterprise applications.</p>
+      </div>
+
+      <div class="story-panel" data-stage="transform">
+        <span class="story-num">03</span>
+        <span class="eyebrow">TRANSFORM · ACE, IIB &amp; Automation</span>
+        <h3>Raw requirements, transformed into resilient systems.</h3>
+        <p>IBM ACE v12 and IIB v10 message flows, ESQL transformation logic, Jenkins CI/CD pipelines, containerized deployments on OpenShift — this is where I turn fragile point-to-point integrations into automated, self-healing infrastructure.</p>
+      </div>
+
+      <div class="story-panel" data-stage="route">
+        <span class="story-num">04</span>
+        <span class="eyebrow">ROUTE · Toward Data &amp; AI</span>
+        <h3>Now routing my own skills somewhere new.</h3>
+        <p>An M.Tech in AI and Data Science at IIT Jodhpur, Apache Kafka in production, Databricks and Google Cloud AI certifications — I'm actively routing everything I know about reliable data movement toward data engineering and applied AI.</p>
+      </div>
+
+      <div class="story-panel" data-stage="deliver">
+        <span class="story-num">05</span>
+        <span class="eyebrow">DELIVER · What's Next</span>
+        <h3>Delivered. Acknowledged. Ready for the next one.</h3>
+        <p>Zero unplanned downtime across every migration I've owned. That's the standard I hold for systems — and for what I want to build next. Open to relocation, sponsorship, and roles that need someone who treats reliability as non-negotiable.</p>
+        <a class="btn btn-primary magnetic" href="#contact" style="margin-top:8px; display:inline-flex;">Let's Talk →</a>
+      </div>
+
+    </div>
+    <div class="story-progress-track"><i id="storyProgressFill"></i></div>
+  </div>
+</section>
+
+<!-- DEVELOPER PROFILE -->
+<section id="dev-profile">
+  <div class="wrap">
+    <div class="eyebrow">~/dev$ github --stats</div>
+    <h2>The <em>developer</em> behind the middleware</h2>
+    <p class="lede">Outside production queue managers, I write code most days — automation scripts, ML experiments, and side projects that keep my fundamentals sharp.</p>
+    <div class="dev-grid">
+      <div class="dev-copy">
+        <p>My day job is enterprise middleware, but my habits are a developer's: I read RFCs and release notes for fun, I automate anything I do twice, and my personal repos are where I test ideas before they're production-ready — from ML pipelines to distributed storage APIs.</p>
+        <p>I lean on <strong>Python</strong> for automation, data work, and ML; <strong>Bash</strong> for anything touching Linux and MQ operations; and I'm comfortable moving between REST APIs, SQL, and cloud SDKs depending on what a project needs.</p>
+        <div class="dev-badges">
+          <span class="dev-badge">4+ yrs shipping production code</span>
+          <span class="dev-badge">Python · Bash · SQL</span>
+          <span class="dev-badge">Open to OSS collaboration</span>
+        </div>
+        <a class="btn btn-ghost magnetic" href="https://github.com/kk007-ai" target="_blank" rel="noopener">View GitHub Profile ↗</a>
+      </div>
+      <div class="dev-stats">
+        <img loading="lazy" alt="GitHub stats for kk007-ai" onerror="this.style.display='none'"
+             src="https://github-readme-stats.vercel.app/api?username=kk007-ai&show_icons=true&theme=dark&hide_border=true&bg_color=12161d&title_color=2fe7c2&icon_color=ffb454&text_color=98a2b3">
+        <img loading="lazy" alt="GitHub streak stats for kk007-ai" onerror="this.style.display='none'"
+             src="https://github-readme-streak-stats.herokuapp.com/?user=kk007-ai&theme=dark&hide_border=true&background=12161d&ring=2fe7c2&fire=ffb454&currStreakLabel=2fe7c2">
+      </div>
+    </div>
+
+    <div class="arch-block">
+      <div class="eyebrow">~/architecture$ trace --live</div>
+      <h3>Architecture in <em>motion</em></h3>
+      <p class="lede">This is a simplified model of the pipeline I actually operate in production — a message's real path from a source banking application to downstream analytics. Click any node for detail; the dots are a live simulation of message flow, not decoration.</p>
+
+      <div class="arch-wrap">
+        <svg class="arch-svg" viewBox="0 0 1040 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated diagram of message flow from BFSI source systems through IBM MQ, IBM ACE/IIB, Apache Kafka, to downstream cloud consumers">
+          <defs>
+            <marker id="archArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="var(--border-strong)"></path>
+            </marker>
+          </defs>
+
+          <!-- connecting paths -->
+          <path id="pathSrcMq" class="arch-path" marker-end="url(#archArrow)" d="M170,205 L228,205"></path>
+          <path id="pathMqAce" class="arch-path" marker-end="url(#archArrow)" d="M410,205 L458,205"></path>
+          <path id="pathAceKafka" class="arch-path" marker-end="url(#archArrow)" d="M650,205 L698,205"></path>
+          <path id="pathKafkaCons" class="arch-path" marker-end="url(#archArrow)" d="M870,205 L908,205"></path>
+          <path id="pathBridge" class="arch-path bridge" d="M320,300 C420,380 680,380 785,280"></path>
+
+          <!-- flow dots: main pipeline (teal) -->
+          <circle class="arch-flow-dot" r="4"><animateMotion dur="1.8s" begin="0s" repeatCount="indefinite"><mpath href="#pathSrcMq"></mpath></animateMotion></circle>
+          <circle class="arch-flow-dot" r="4"><animateMotion dur="1.8s" begin="0.9s" repeatCount="indefinite"><mpath href="#pathSrcMq"></mpath></animateMotion></circle>
+          <circle class="arch-flow-dot" r="4"><animateMotion dur="1.6s" begin="0.3s" repeatCount="indefinite"><mpath href="#pathMqAce"></mpath></animateMotion></circle>
+          <circle class="arch-flow-dot" r="4"><animateMotion dur="1.6s" begin="1.1s" repeatCount="indefinite"><mpath href="#pathMqAce"></mpath></animateMotion></circle>
+          <circle class="arch-flow-dot" r="4"><animateMotion dur="1.6s" begin="0.6s" repeatCount="indefinite"><mpath href="#pathAceKafka"></mpath></animateMotion></circle>
+          <circle class="arch-flow-dot" r="4"><animateMotion dur="1.6s" begin="1.4s" repeatCount="indefinite"><mpath href="#pathAceKafka"></mpath></animateMotion></circle>
+          <circle class="arch-flow-dot" r="4"><animateMotion dur="1.8s" begin="0.2s" repeatCount="indefinite"><mpath href="#pathKafkaCons"></mpath></animateMotion></circle>
+          <circle class="arch-flow-dot" r="4"><animateMotion dur="1.8s" begin="1.0s" repeatCount="indefinite"><mpath href="#pathKafkaCons"></mpath></animateMotion></circle>
+
+          <!-- flow dots: MQ-to-Kafka bridge (violet, slower — this is the real bridging pipeline) -->
+          <circle class="arch-flow-dot bridge-dot" r="4"><animateMotion dur="4.2s" begin="0s" repeatCount="indefinite"><mpath href="#pathBridge"></mpath></animateMotion></circle>
+          <circle class="arch-flow-dot bridge-dot" r="4"><animateMotion dur="4.2s" begin="2.1s" repeatCount="indefinite"><mpath href="#pathBridge"></mpath></animateMotion></circle>
+
+          <!-- Node: Source Systems -->
+          <g class="arch-node" data-node="source" tabindex="0" role="button" aria-label="Source systems node">
+            <rect class="arch-node-box" x="20" y="150" width="150" height="110" rx="12"></rect>
+            <text class="arch-node-tag" x="36" y="174">SOURCE</text>
+            <text class="arch-node-title" x="36" y="198">BFSI Apps</text>
+            <text class="arch-node-sub" x="36" y="218">Core Banking</text>
+            <text class="arch-node-sub" x="36" y="232">Payments · Loans</text>
+          </g>
+
+          <!-- Node: IBM MQ -->
+          <g class="arch-node" data-node="mq" tabindex="0" role="button" aria-label="IBM MQ node">
+            <rect class="arch-node-box" x="228" y="110" width="182" height="190" rx="12"></rect>
+            <text class="arch-node-tag" x="244" y="136">MESSAGE BROKER</text>
+            <text class="arch-node-title" x="244" y="160">IBM MQ 9.2</text>
+            <text class="arch-node-sub" x="244" y="182">Queue Managers</text>
+            <text class="arch-node-sub" x="244" y="197">Clustering · HA/DR</text>
+            <text class="arch-node-sub" x="244" y="212">CHLAUTH · SSL/TLS</text>
+            <text class="arch-node-sub" x="244" y="227">DLQ · Backout Queues</text>
+            <text class="arch-node-sub" x="244" y="242">Multi-Instance QM</text>
+          </g>
+
+          <!-- Node: ACE / IIB -->
+          <g class="arch-node" data-node="ace" tabindex="0" role="button" aria-label="IBM ACE and IIB node">
+            <rect class="arch-node-box" x="458" y="130" width="192" height="150" rx="12"></rect>
+            <text class="arch-node-tag" x="474" y="156">INTEGRATION</text>
+            <text class="arch-node-title" x="474" y="180">ACE v12 / IIB v10</text>
+            <text class="arch-node-sub" x="474" y="202">ESQL · Java Compute</text>
+            <text class="arch-node-sub" x="474" y="217">JSON/XML/XSD/DFDL</text>
+            <text class="arch-node-sub" x="474" y="232">REST · SOAP · JMS</text>
+          </g>
+
+          <!-- Node: Kafka -->
+          <g class="arch-node" data-node="kafka" tabindex="0" role="button" aria-label="Apache Kafka node">
+            <rect class="arch-node-box" x="698" y="130" width="172" height="150" rx="12"></rect>
+            <text class="arch-node-tag" x="714" y="156">EVENT STREAM</text>
+            <text class="arch-node-title" x="714" y="180">Apache Kafka</text>
+            <text class="arch-node-sub" x="714" y="202">Topics · Partitions</text>
+            <text class="arch-node-sub" x="714" y="217">MQ-Kafka Bridging</text>
+            <text class="arch-node-sub" x="714" y="232">Real-Time Ingestion</text>
+          </g>
+
+          <!-- Node: Consumers / Cloud -->
+          <g class="arch-node" data-node="consumers" tabindex="0" role="button" aria-label="Downstream consumers and cloud node">
+            <rect class="arch-node-box" x="908" y="150" width="112" height="110" rx="12"></rect>
+            <text class="arch-node-tag" x="922" y="174">SINK</text>
+            <text class="arch-node-title" x="922" y="198">Cloud &amp;</text>
+            <text class="arch-node-title" x="922" y="216">Analytics</text>
+            <text class="arch-node-sub" x="922" y="236">GCP · Grafana</text>
+          </g>
+        </svg>
+        <div class="arch-legend">
+          <span><i></i> Live message flow (MQ → ACE/IIB → Kafka → Cloud)</span>
+          <span><i class="bridge"></i> Direct MQ-to-Kafka bridging pipeline</span>
+          <span class="arch-counter-wrap">Simulated messages routed: <b id="archCounter">0</b></span>
+        </div>
+      </div>
+
+      <div class="arch-tabs" role="tablist">
+        <button class="arch-tab active" data-node="source" type="button">Source Systems</button>
+        <button class="arch-tab" data-node="mq" type="button">IBM MQ</button>
+        <button class="arch-tab" data-node="ace" type="button">IBM ACE / IIB</button>
+        <button class="arch-tab" data-node="kafka" type="button">Apache Kafka</button>
+        <button class="arch-tab" data-node="consumers" type="button">Cloud &amp; Consumers</button>
+      </div>
+
+      <div class="arch-panel active" data-arch-panel="source">
+        <h4>Where the message starts</h4>
+        <p>Upstream BFSI applications — core banking, payments, and loan origination systems — generate the transactions that eventually need to reach downstream systems reliably, in order, and without loss. Nothing downstream matters if this handoff isn't trustworthy, which is why the very first hop is into a queue manager rather than a direct point-to-point call.</p>
+      </div>
+      <div class="arch-panel" data-arch-panel="mq">
+        <h4>IBM MQ — the message broker</h4>
+        <p>This is where I spend most of my production hours. I design, configure, and administer Queue Managers, Channels, Listeners, and Clusters across Dev, Test, UAT, Pre-Prod, DR, and Production landscapes — Local, Remote, Alias, and Transmission Queues, plus Topics and Subscriptions for pub/sub patterns.</p>
+        <p>High availability comes from Multi-Instance Queue Managers, MQ Clustering, and active-standby failover, engineered to meet enterprise RTO/RPO targets. Security is enforced through SSL/TLS channel encryption, PKI keystore/truststore management, CHLAUTH rules, and Object Authority Manager (OAM) permissions. When something breaks — queue buildup, DLQ growth, backout queues, channel failures, certificate expiry — this is also where the troubleshooting, batch reprocessing, and recovery happens, with zero business data loss as the standard.</p>
+        <div class="proj-tags"><span class="proj-tag">Queue Managers</span><span class="proj-tag">Clustering</span><span class="proj-tag">CHLAUTH</span><span class="proj-tag">SSL/TLS · PKI</span><span class="proj-tag">DLQ / Backout Queues</span></div>
+      </div>
+      <div class="arch-panel" data-arch-panel="ace">
+        <h4>IBM ACE / IIB — transformation &amp; routing</h4>
+        <p>Once a message is safely queued, IBM App Connect Enterprise v12 and IBM Integration Bus v10 do the transformation work: message flows built from ESQL, Java Compute Nodes, Mapping Nodes, and shared reusable libraries, with exception-handling frameworks so failures are caught, not silently dropped.</p>
+        <p>Payloads move between JSON, XML, XSD, DFDL, and XSLT/XPath depending on what the consuming system expects, and the same flows expose REST and SOAP endpoints alongside JMS-based messaging. Deployment is BAR-file packaging through Jenkins CI/CD, promoted DEV → TEST → UAT → PROD with SonarQube quality gates and rollback plans, not manual copy-paste.</p>
+        <div class="proj-tags"><span class="proj-tag">ESQL</span><span class="proj-tag">Java Compute Node</span><span class="proj-tag">DFDL / XSLT</span><span class="proj-tag">REST · SOAP · JMS</span><span class="proj-tag">BAR Deployment</span></div>
+      </div>
+      <div class="arch-panel" data-arch-panel="kafka">
+        <h4>Apache Kafka — event streaming</h4>
+        <p>Not every consumer wants a queued, transactional message — some want a continuous, replayable event stream. That's where MQ-to-Kafka bridging comes in (the dashed violet path above): production data moving out of the transactional MQ world into topics and partitions for real-time ingestion by analytics and event-driven services, without the source systems ever knowing Kafka exists downstream.</p>
+        <div class="proj-tags"><span class="proj-tag">Topics &amp; Partitions</span><span class="proj-tag">MQ-Kafka Bridging</span><span class="proj-tag">Event-Driven Architecture</span></div>
+      </div>
+      <div class="arch-panel" data-arch-panel="consumers">
+        <h4>Cloud &amp; downstream consumers</h4>
+        <p>The final hop is where messages actually get used — GCP services, analytics pipelines, and monitoring. I build Grafana and Google Cloud Monitoring dashboards for real-time visibility into queue depth, channel health, and Integration Server performance, and the same telemetry feeds ServiceNow-driven incident and problem management when something needs attention.</p>
+        <div class="proj-tags"><span class="proj-tag">GCP</span><span class="proj-tag">Grafana</span><span class="proj-tag">ServiceNow ITSM</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+
+    <div class="eyebrow">~/profile$ whoami</div>
+    <h2>Engineering the <em>pipes</em> enterprises run on</h2>
+    <div class="about-grid">
+      <div>
+        <p>I'm a Middleware &amp; Integration Developer with <strong>4+ years at Tata Consultancy Services</strong>, where I design, secure, and operate the messaging backbone for mission-critical BFSI production systems — the kind that can't lose a transaction or miss an SLA window.</p>
+        <p>My core stack is <strong>IBM MQ 9.2</strong> for queue manager architecture and clustering, <strong>IBM App Connect Enterprise (ACE v12)</strong> and <strong>IBM Integration Bus (IIB v10)</strong> for message flow development, and <strong>Apache Kafka</strong> for real-time event streaming that bridges legacy MQ systems with modern microservices.</p>
+        <p>Beyond development, I own the operational side: SSL/TLS security hardening, HA/DR architecture, Linux (RHEL) administration, and Python/Shell automation that keeps 12+ production applications running at 99.9% uptime. I'm also DevOps-capable — Jenkins CI/CD, Docker, Kubernetes, and Red Hat OpenShift under IBM Cloud Pak for Integration.</p>
+        <p>I work across the full environment landscape — Dev, Test, UAT, Pre-Prod, DR, and Production — and provide L2/L3 production support with Major Incident Management for P1/P2 issues, running Root Cause Analysis and cross-functional bridge calls with Infrastructure, Network, Security, and Database teams. Governance runs on ITIL practices via ServiceNow: Incident, Problem, Change, and Release Management, including Change Advisory Board reviews and disaster recovery exercises.</p>
+        <p>I'm currently deepening my systems thinking through an <strong>M.Tech in AI and Data Science at IIT Jodhpur</strong>, which sharpens how I reason about data flow, scale, and reliability — the same instincts that drive how I architect integration systems.</p>
+      </div>
+      <div class="iit-card">
+        <span class="tag-badge">ACADEMIC FOUNDATION</span>
+        <h3>IIT Jodhpur</h3>
+        <p>M.Tech — AI and Data Science</p>
+        <div class="divider"></div>
+        <p>One of India's premier engineering institutes, ranked among the top IITs for research in AI, data science, and systems engineering.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="wrap">
+    <div class="eyebrow">~/career$ log --achievements</div>
+    <h2>Numbers that <em>matter</em></h2>
+    <p class="lede">Every metric below comes from production systems supporting BFSI clients — not sandbox demos.</p>
+    <div class="ach-grid">
+      <div class="ach-card card tilt">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <span class="num">99.9%</span>
+        <h4>SLA compliance &amp; zero data loss</h4>
+        <p>Sustained across 12+ BFSI production applications processing 1M+ messages per day.</p>
+      </div>
+      <div class="ach-card card warn-tone tilt">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+        <span class="num">30%</span>
+        <h4>Latency reduction</h4>
+        <p>Cut inter-application messaging latency through IBM MQ 9.2 queue manager and channel tuning across 12+ enterprise applications.</p>
+      </div>
+      <div class="ach-card card tilt">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <span class="num">20%</span>
+        <h4>Lower ACE processing overhead</h4>
+        <p>Achieved across 15+ production integration flows via ESQL and JavaCompute node optimization.</p>
+      </div>
+      <div class="ach-card card warn-tone tilt">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <span class="num">25%</span>
+        <h4>Faster mean time to resolution</h4>
+        <p>Delivered alongside 99.9% production uptime through proactive Grafana and GCP Stackdriver monitoring.</p>
+      </div>
+      <div class="ach-card card tilt">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6 6L20 6"/></svg></div>
+        <span class="num">0</span>
+        <h4>Unplanned downtime</h4>
+        <p>Across multiple IBM MQ / ACE version upgrades and a critical upstream migration cutover.</p>
+      </div>
+      <div class="ach-card card warn-tone tilt">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+        <span class="num">&lt;150ms</span>
+        <h4>API latency at scale</h4>
+        <p>Delivered in a self-built multi-cloud storage platform validated under 100+ concurrent JMeter sessions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow">~/career$ status --current</div>
+    <h2>Where I've <em>built</em></h2>
+    <p class="lede">Enterprise middleware engineering delivering mission-critical integration infrastructure.</p>
+
+    <div class="exp-card card">
+      <div class="exp-top">
+        <div>
+          <h3>Software Engineer — IBM MQ, ACE &amp; Integration Engineering</h3>
+          <span class="company">Tata Consultancy Services (TCS) · New Delhi, India</span>
+        </div>
+        <span class="dates">May 2022 — Present</span>
+      </div>
+
+      <div class="exp-tabs" role="tablist">
+        <button class="exp-tab active" data-exp="mq" type="button">MQ Administration &amp; Architecture</button>
+        <button class="exp-tab" data-exp="ace" type="button">ACE / IIB Development &amp; DevOps</button>
+        <button class="exp-tab" data-exp="linux" type="button">Linux, Monitoring &amp; Incidents</button>
+      </div>
+
+      <div class="exp-panel active" data-exp-panel="mq">
+        <ul>
+          <li><strong>Cut inter-application messaging latency by 30%</strong> and sustained 99.9% SLA compliance across 12+ BFSI applications by architecting and administering IBM MQ 9.2 queue managers and tuning channels.</li>
+          <li><strong>Achieved zero-data-loss failover</strong> by designing multi-instance queue manager and MQ clustering architectures for high availability and disaster recovery, meeting enterprise RTO/RPO targets.</li>
+          <li><strong>Closed security audit gaps</strong> through SSL/TLS channel encryption, PKI keystore/truststore management, and RBAC enforcement via setmqaut and authrec.</li>
+          <li><strong>Delivered zero unplanned downtime</strong> across multiple MQ version upgrades and fix-pack installations through ITIL v4-aligned change management, including CAB documentation and risk assessments.</li>
+          <li><strong>Ensured zero business data loss</strong> during production incidents by executing message recovery, dead-letter and backout queue reprocessing, batch reprocessing, and queue/channel recovery procedures across Local, Remote, Alias, and Transmission Queues, Topics, and Subscriptions.</li>
+        </ul>
+      </div>
+      <div class="exp-panel" data-exp-panel="ace">
+        <ul>
+          <li><strong>Processed 1M+ messages/day with zero SLA breaches</strong> by designing and deploying 15+ production-grade IBM ACE v12 message flows covering REST/SOAP orchestration and JSON/XML/XSLT transformation.</li>
+          <li><strong>Reduced processing overhead by 20%</strong> across 15+ integration flows by optimizing ESQL logic, tuning JavaCompute nodes, and implementing XPath-driven routing and exception handling.</li>
+          <li><strong>Standardized deployments across DEV/TEST/UAT/PROD</strong> by building Jenkins CI/CD pipelines with SonarQube quality gates for BAR file packaging and versioning.</li>
+          <li><strong>Eliminated manual intervention risk</strong> during a critical upstream migration by writing a Bash automation script to orchestrate ACE flow start/stop sequences for zero-downtime deployment.</li>
+          <li><strong>Advanced cloud-native modernization</strong> by piloting containerized ACE deployments on Red Hat OpenShift/Kubernetes under IBM Cloud Pak for Integration (CP4I).</li>
+          <li><strong>Integrated MQ with Oracle and MySQL</strong>, REST/SOAP services, and file systems, transforming payloads across JSON, XML, XSD, DFDL, and XSLT with reusable Shared Libraries and JMS-based messaging where required.</li>
+        </ul>
+      </div>
+      <div class="exp-panel" data-exp-panel="linux">
+        <ul>
+          <li><strong>Maintained 99.9% production uptime and cut MTTR by 25%</strong> through proactive Grafana and GCP Stackdriver dashboards with automated alerting.</li>
+          <li><strong>Eliminated recurring manual toil</strong> by developing Shell/Python scripts for queue depth monitoring, MQ health checks, DLQ alerting, and log validation across RHEL environments.</li>
+          <li><strong>Enabled real-time data ingestion at enterprise scale</strong> by administering Apache Kafka and GCP Pub/Sub and building MQ-to-Kafka bridging pipelines.</li>
+          <li><strong>Restored service within SLA on P1/P2 incidents</strong> by leading Root Cause Analysis investigations and chairing cross-functional technical bridge calls; authored runbooks that reduced recurring L1 escalations.</li>
+        </ul>
+      </div>
+
+      <div class="exp-tags">
+        <span class="tag">IBM MQ</span><span class="tag">IBM ACE / IIB</span><span class="tag">Apache Kafka</span>
+        <span class="tag">GCP</span><span class="tag">Jenkins CI/CD</span><span class="tag">OpenShift</span>
+        <span class="tag">Python / Shell</span><span class="tag">SSL/TLS</span><span class="tag">ServiceNow ITSM</span>
+        <span class="tag">Oracle / MySQL</span><span class="tag">DFDL / JMS</span>
+      </div>
+    </div>
+
+    <div class="dash card" style="margin-top:22px;">
+      <div class="dash-head">
+        <span class="dash-title">LIVE OPS CONSOLE — PROD.MONITOR<span class="dash-badge">SIMULATED</span></span>
+        <div class="dash-head-right">
+          <span class="dash-uptime">SESSION UPTIME <b id="dashUptime">00:00:00</b></span>
+          <div class="dots"><i></i><i></i><i style="background:var(--accent)"></i></div>
+        </div>
+      </div>
+      <p class="dash-caption">An illustrative simulation of the kind of monitoring I build in production — not a live feed of TCS systems or client data.</p>
+
+      <div class="sys-grid">
+        <div class="sys-card" data-sys="qm1">
+          <div class="sys-top"><span class="sys-dot"></span><span class="sys-name">QM.PROD.01</span></div>
+          <div class="sys-sub">Core Banking</div>
+          <div class="sys-metric">Depth <b data-metric="depth">6</b></div>
+          <div class="sys-status" data-status>Healthy</div>
+        </div>
+        <div class="sys-card" data-sys="qm2">
+          <div class="sys-top"><span class="sys-dot"></span><span class="sys-name">QM.PROD.02</span></div>
+          <div class="sys-sub">Payments</div>
+          <div class="sys-metric">Depth <b data-metric="depth">11</b></div>
+          <div class="sys-status" data-status>Healthy</div>
+        </div>
+        <div class="sys-card" data-sys="qm3">
+          <div class="sys-top"><span class="sys-dot"></span><span class="sys-name">QM.PROD.03</span></div>
+          <div class="sys-sub">Loans</div>
+          <div class="sys-metric">Depth <b data-metric="depth">8</b></div>
+          <div class="sys-status" data-status>Healthy</div>
+        </div>
+        <div class="sys-card" data-sys="ace1">
+          <div class="sys-top"><span class="sys-dot"></span><span class="sys-name">ACE.INT.01</span></div>
+          <div class="sys-sub">Integration Server</div>
+          <div class="sys-metric">Flows <b data-metric="flows">15</b></div>
+          <div class="sys-status" data-status>Healthy</div>
+        </div>
+        <div class="sys-card" data-sys="kafka1">
+          <div class="sys-top"><span class="sys-dot"></span><span class="sys-name">KAFKA.CLUSTER.01</span></div>
+          <div class="sys-sub">Event Streaming</div>
+          <div class="sys-metric">Lag <b data-metric="lag">0.2s</b></div>
+          <div class="sys-status" data-status>Healthy</div>
+        </div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="dash-card">
+          <div class="lbl">Throughput</div>
+          <div class="val accent" id="metricThroughput">1.02M</div>
+          <svg class="spark" viewBox="0 0 100 26" preserveAspectRatio="none"><polyline id="spark1" points="" fill="none" stroke="var(--accent)" stroke-width="2"/></svg>
+        </div>
+        <div class="dash-card">
+          <div class="lbl">Avg Latency</div>
+          <div class="val" id="metricLatency">42ms</div>
+          <svg class="spark" viewBox="0 0 100 26" preserveAspectRatio="none"><polyline id="spark2" points="" fill="none" stroke="var(--info)" stroke-width="2"/></svg>
+        </div>
+        <div class="gauge-wrap">
+          <svg width="60" height="60" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="27" fill="none" stroke="var(--border)" stroke-width="6"/>
+            <circle id="gaugeRing" cx="32" cy="32" r="27" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="169.6" stroke-dashoffset="169.6" transform="rotate(-90 32 32)"/>
+            <text x="32" y="37" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="var(--text)">99.9%</text>
+          </svg>
+          <div class="glbl"><div class="lbl">SLA Compliance</div><div class="sub">12+ BFSI apps · zero data loss</div></div>
+        </div>
+      </div>
+      <div class="dash-actions">
+        <button class="btn-mini" id="incidentBtn" type="button">▶ Simulate Incident Response</button>
+        <span class="resolved-chip">Resolved this session: <b id="resolvedCount">0</b></span>
+      </div>
+      <div class="dash-log" id="dashLog" aria-live="polite"><div class="log-line">System nominal. All queue managers reporting healthy.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">~/stack$ list --verbose</div>
+    <h2>The <em>toolkit</em></h2>
+    <p class="lede">A focused stack built around middleware integration, security, automation, and cloud-native patterns.</p>
+
+    <div class="skills-grid">
+      <div class="skill-card card tilt"><h4>IBM Middleware</h4><p>IBM MQ 9.2, IBM App Connect Enterprise (ACE v12/v13), IBM Integration Bus (IIB v10), WebSphere Message Broker, IBM DataPower, ESQL</p></div>
+      <div class="skill-card card tilt"><h4>MQ Administration</h4><p>Queue Manager, Local/Remote/Alias/Model Queues, Channels, Listeners, DLQ, Trigger Monitor, MQ Clustering, Multi-Instance QM, HA/DR, runmqsc, dspmq, RFHUTIL, MQ Explorer</p></div>
+      <div class="skill-card card tilt"><h4>ACE / IIB Development</h4><p>Message Flow Design, BAR File Deployment, Integration Server/Node, JavaCompute Node, XSL Transformation, Mapping Node, XSD/XPath/DFDL, JMS, Exception Handling Frameworks</p></div>
+      <div class="skill-card card tilt"><h4>Integration Architecture</h4><p>REST API, SOAP/WSDL, EAI, SOA, ESB, Pub-Sub, Point-to-Point, Request-Reply, Event-Driven Architecture, Postman, Swagger/OpenAPI, JSON/XML/XSLT</p></div>
+      <div class="skill-card card tilt"><h4>Security</h4><p>SSL/TLS, PKI Certificate Management, Keystore/Truststore, CHLAUTH, setmqaut, authrec, RBAC, OAuth, Encryption in Transit</p></div>
+      <div class="skill-card card tilt"><h4>DevOps &amp; Containers</h4><p>Jenkins CI/CD, Docker, Kubernetes, Red Hat OpenShift, IBM Cloud Pak for Integration, Git/GitHub/Bitbucket, SonarQube, Maven, Jira</p></div>
+      <div class="skill-card card tilt"><h4>Linux &amp; Scripting</h4><p>RHEL, Ubuntu, Bash/Shell, PowerShell, Cron, grep/awk/sed/tail, OS Patch Management, SSH, Python (pandas, NumPy, scikit-learn), SQL (Oracle, MySQL, DB2)</p></div>
+      <div class="skill-card card tilt"><h4>Cloud &amp; Streaming</h4><p>GCP (BigQuery, Compute Engine, Pub/Sub, IAM, VPC), AWS (EC2, S3, Lambda, EKS), Apache Kafka, MQ-to-Kafka Bridging</p></div>
+      <div class="skill-card card tilt"><h4>ITSM &amp; Governance</h4><p>ServiceNow, ITIL v4 (Incident, Problem, Change, Release Management), Change Advisory Board (CAB) reviews, Disaster Recovery drills, Runbooks &amp; Operational Documentation</p></div>
+    </div>
+
+    <div class="prof-list">
+      <div class="prof-row"><span>IBM MQ / ACE / IIB</span><div class="bar"><i data-width="96"></i></div><span class="pct">96%</span></div>
+      <div class="prof-row"><span>Linux &amp; Infrastructure</span><div class="bar"><i data-width="88"></i></div><span class="pct">88%</span></div>
+      <div class="prof-row"><span>Python &amp; Shell Scripting</span><div class="bar"><i data-width="86"></i></div><span class="pct">86%</span></div>
+      <div class="prof-row"><span>Security (SSL/TLS, PKI, RBAC)</span><div class="bar"><i data-width="85"></i></div><span class="pct">85%</span></div>
+      <div class="prof-row"><span>Apache Kafka</span><div class="bar"><i data-width="80"></i></div><span class="pct">80%</span></div>
+      <div class="prof-row"><span>GCP &amp; Cloud Services</span><div class="bar"><i data-width="75"></i></div><span class="pct">75%</span></div>
+      <div class="prof-row"><span>DevOps (Jenkins, Docker, K8s)</span><div class="bar"><i data-width="78"></i></div><span class="pct">78%</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights">
+  <div class="wrap">
+    <div class="eyebrow">~/insights$ cat notes.md</div>
+    <h2>Where I'm headed: <em>Data &amp; AI</em></h2>
+    <p class="lede">Middleware taught me how systems move data reliably. My M.Tech and certifications are pushing that instinct into data engineering and applied AI.</p>
+
+    <div class="insight-tabs" role="tablist">
+      <button class="insight-tab active" data-tab="de" type="button">Data Engineering</button>
+      <button class="insight-tab" data-tab="genai" type="button">Generative AI &amp; LLMs</button>
+      <button class="insight-tab" data-tab="stream" type="button">Streaming &amp; Real-Time Data</button>
+      <button class="insight-tab" data-tab="mlops" type="button">MLOps &amp; Cloud</button>
+    </div>
+
+    <div class="insight-panel card active" data-panel="de">
+      <h4>Data Engineering</h4>
+      <p>My M.Tech coursework at IIT Jodhpur and Databricks certifications (Data Engineer Associate, Machine Learning Professional) are extending the pipeline instincts I built running IBM MQ and ACE in production — the same discipline around schema, throughput, and failure handling applies whether the payload is a bank transaction or a training dataset.</p>
+      <p>I think about data pipelines the way I think about message flows: idempotent, observable, and built to fail loudly rather than silently.</p>
+      <div class="insight-tags"><span class="proj-tag">Delta Lake</span><span class="proj-tag">ETL/ELT</span><span class="proj-tag">Apache Spark</span><span class="proj-tag">Schema Design</span></div>
+    </div>
+
+    <div class="insight-panel card" data-panel="genai">
+      <h4>Generative AI &amp; LLMs</h4>
+      <p>Certified as a Google Cloud Generative AI Leader and a Databricks Generative AI Engineer Associate, I'm exploring how LLMs fit into enterprise integration patterns — think intelligent message routing, automated log triage, and natural-language interfaces over existing ACE flows rather than replacing the middleware itself.</p>
+      <p>My interest is applied and infrastructure-first: how do you serve, monitor, and secure a model as rigorously as you'd operate a production queue manager.</p>
+      <div class="insight-tags"><span class="proj-tag">Prompt Engineering</span><span class="proj-tag">RAG Patterns</span><span class="proj-tag">LLM Ops</span></div>
+    </div>
+
+    <div class="insight-panel card" data-panel="stream">
+      <h4>Streaming &amp; Real-Time Data</h4>
+      <p>Bridging IBM MQ with Apache Kafka in production gave me a direct look at where batch thinking breaks down. I'm increasingly drawn to event-driven architectures — where a message's journey from producer to consumer is observable end-to-end, and backpressure is a design decision, not an incident.</p>
+      <div class="insight-tags"><span class="proj-tag">Apache Kafka</span><span class="proj-tag">Event-Driven Architecture</span><span class="proj-tag">GCP Pub/Sub</span></div>
+    </div>
+
+    <div class="insight-panel card" data-panel="mlops">
+      <h4>MLOps &amp; Cloud</h4>
+      <p>DevOps habits from CI/CD pipelines and containerized ACE deployments transfer directly to MLOps: versioning, reproducibility, and automated rollback matter just as much for a model artifact as a BAR file. I'm building toward that intersection with GCP, Kubernetes, and Databricks as the common thread.</p>
+      <div class="insight-tags"><span class="proj-tag">GCP</span><span class="proj-tag">Kubernetes</span><span class="proj-tag">Databricks</span><span class="proj-tag">CI/CD for ML</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="wrap">
+    <div class="eyebrow">~/certs$ verify --all</div>
+    <h2>Verified <em>credentials</em></h2>
+    <p class="lede">Every certification listed is independently verifiable via credential ID on LinkedIn.</p>
+
+    <p class="cert-group-title">IBM Middleware &amp; Cloud — Core</p>
+    <div class="cert-grid">
+      <a class="cert-card card tilt" href="https://www.linkedin.com/in/kaushal-kushwaha-5a250a258/details/certifications/" target="_blank" rel="noopener"><div class="cert-icon">MQ</div><div><h5>IBM WebSphere MQ Foundation <em>↗</em></h5><span>Tata Consultancy Services · 2026</span></div></a>
+      <a class="cert-card card tilt" href="https://www.udemy.com/certificate/UC-205e6be3-ecbd-4267-9d34-29dd4fb03ce1/" target="_blank" rel="noopener"><div class="cert-icon">CE</div><div><h5>IBM App Connect Enterprise 12 (ACE) Development <em>↗</em></h5><span>Udemy · 2025</span></div></a>
+      <a class="cert-card card tilt" href="https://www.udemy.com/certificate/UC-2deae771-04df-464d-bef8-6805ef9b9d01/" target="_blank" rel="noopener"><div class="cert-icon">WS</div><div><h5>Mastering IBM WebSphere 9.x Administration <em>↗</em></h5><span>Udemy · 2026</span></div></a>
+      <a class="cert-card card tilt" href="https://www.udemy.com/certificate/UC-bdf6db15-58f0-4348-85f2-a2436aff0123/" target="_blank" rel="noopener"><div class="cert-icon">DP</div><div><h5>IBM DataPower Development — Basics <em>↗</em></h5><span>Udemy · 2026</span></div></a>
+      <a class="cert-card card tilt" href="https://www.udemy.com/certificate/UC-8ea1c691-98fc-4d15-854a-37c67fa6f71d/" target="_blank" rel="noopener"><div class="cert-icon">KF</div><div><h5>Apache Kafka Series — Beginners V3 <em>↗</em></h5><span>Udemy · 2026</span></div></a>
+      <a class="cert-card card tilt" href="https://www.linkedin.com/in/kaushal-kushwaha-5a250a258/details/certifications/" target="_blank" rel="noopener"><div class="cert-icon">LX</div><div><h5>Linux Professional Institute — Linux Essentials <em>↗</em></h5><span>LPI · 2025</span></div></a>
+      <a class="cert-card card tilt" href="https://www.linkedin.com/in/kaushal-kushwaha-5a250a258/details/certifications/" target="_blank" rel="noopener"><div class="cert-icon">GC</div><div><h5>Google Cloud Associate Cloud Engineer <em>↗</em></h5><span>Google Cloud · 2023</span></div></a>
+    </div>
+
+    <p class="cert-group-title">Data &amp; AI — Additional</p>
+    <div class="cert-grid">
+      <a class="cert-card card tilt" href="https://www.linkedin.com/in/kaushal-kushwaha-5a250a258/details/certifications/" target="_blank" rel="noopener"><div class="cert-icon">ML</div><div><h5>Databricks Certified Machine Learning Professional <em>↗</em></h5><span>Databricks · 2025</span></div></a>
+      <a class="cert-card card tilt" href="https://www.linkedin.com/in/kaushal-kushwaha-5a250a258/details/certifications/" target="_blank" rel="noopener"><div class="cert-icon">AI</div><div><h5>Databricks Certified Generative AI Engineer Associate <em>↗</em></h5><span>Databricks · 2025</span></div></a>
+      <a class="cert-card card tilt" href="https://www.linkedin.com/in/kaushal-kushwaha-5a250a258/details/certifications/" target="_blank" rel="noopener"><div class="cert-icon">DE</div><div><h5>Databricks Certified Data Engineer Associate <em>↗</em></h5><span>Databricks · 2025</span></div></a>
+      <a class="cert-card card tilt" href="https://www.linkedin.com/in/kaushal-kushwaha-5a250a258/details/certifications/" target="_blank" rel="noopener"><div class="cert-icon">GL</div><div><h5>Google Cloud Certified Generative AI Leader <em>↗</em></h5><span>Google Cloud · 2025</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="eyebrow">~/projects$ ls -la</div>
+    <h2>What I've <em>built</em></h2>
+    <p class="lede">Applied machine learning, middleware automation, and NLP research projects outside my day-to-day role.</p>
+
+    <div class="proj-grid">
+      <div class="proj-card card tilt">
+        <div class="proj-glyph"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></div>
+        <span class="proj-cat">DevOps · Middleware Automation</span>
+        <h4>IBM MQ Automation Toolkit</h4>
+        <p>A suite of Python and Shell scripts automating routine IBM MQ administration — queue depth monitoring, dead-letter queue analysis, channel health checks, and SSL certificate rotation workflows, with threshold alerts feeding enterprise observability dashboards.</p>
+        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Shell</span><span class="proj-tag">IBM MQ</span><span class="proj-tag">MQSC</span><span class="proj-tag">SSL/TLS</span><span class="proj-tag">REST API</span></div>
+        <span class="proj-status">Internal / Proprietary</span>
+      </div>
+
+      <div class="proj-card card tilt">
+        <div class="proj-glyph"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <span class="proj-cat">Cloud · Distributed Systems</span>
+        <h4>Multi-Cloud Storage-as-a-Service (STaaS)</h4>
+        <p>A multi-cloud distributed storage REST API supporting object, block, and file storage across AWS, Azure, and GCP, with a unified access layer abstracting cloud-specific SDKs. Achieved sub-150ms API latency validated under 100+ concurrent sessions via JMeter load testing.</p>
+        <div class="proj-tags"><span class="proj-tag">AWS S3</span><span class="proj-tag">Azure Blob</span><span class="proj-tag">GCP Storage</span><span class="proj-tag">Docker</span><span class="proj-tag">Python</span></div>
+        <span class="proj-status">Personal Project</span>
+      </div>
+
+      <div class="proj-card card tilt">
+        <div class="proj-glyph"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <span class="proj-cat">Machine Learning · Agriculture Tech</span>
+        <h4>Crop Recommendation System</h4>
+        <p>An ML-powered advisory system recommending optimal crops from soil chemistry and climate data — N, P, K ratios alongside temperature, humidity, pH, and rainfall. Trained on 2,200+ samples across 22 crop varieties; Random Forest achieved ~99.1% accuracy, deployed via Pickle for real-time inference.</p>
+        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Scikit-learn</span><span class="proj-tag">Random Forest</span><span class="proj-tag">Pandas</span><span class="proj-tag">NumPy</span></div>
+        <span class="proj-status">Research / Academic</span>
+      </div>
+
+      <div class="proj-card card tilt">
+        <div class="proj-glyph"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
+        <span class="proj-cat">NLP · Cognitive Science · ML Research</span>
+        <h4>Trainable Spaced Repetition Model</h4>
+        <p>A replication and extension of the Half-Life Regression model (Settles &amp; Meeder, ACL 2016) for adaptive language learning — modeling memory decay from learner history to predict optimal review intervals. Implemented 8 ablation variants and an interactive prediction UI, evaluated on the Duolingo SLAM dataset.</p>
+        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Half-Life Regression</span><span class="proj-tag">NLP</span><span class="proj-tag">Jupyter</span></div>
+        <span class="proj-status">IIT Jodhpur Research</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="eyebrow">~/education$ cat transcript.txt</div>
+    <h2>The <em>foundation</em></h2>
+    <div class="edu-grid edu-grid-2">
+      <div class="edu-card card highlight">
+        <span class="badge">CURRENT · IIT JODHPUR</span>
+        <h4>M.Tech — AI and Data Science</h4>
+        <p>Indian Institute of Technology (IIT) Jodhpur</p>
+      </div>
+      <div class="edu-card card">
+        <span class="badge">UNDERGRADUATE</span>
+        <h4>B.Tech — Electrical Engineering</h4>
+        <p>IET, MJP Rohilkhand University, Bareilly</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">~/contact$ ping kaushal</div>
+    <h2>Let's <em>connect</em></h2>
+    <div class="contact-wrap">
+      <div class="contact-links">
+        <div class="contact-link card">
+          <a href="mailto:kaushal.iitj29@gmail.com" class="contact-link-main">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span>
+            <div><strong>Email</strong><span>kaushal.iitj29@gmail.com</span></div>
+          </a>
+          <button class="copy-btn" data-copy="kaushal.iitj29@gmail.com" type="button" title="Copy email">Copy</button>
+        </div>
+        <a class="contact-link card" href="https://www.linkedin.com/in/kaushal-kushwaha-5a250a258" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-.02-4 2 2 0 01.02 4zM4.75 8.5h4.4V21h-4.4V8.5zm7.1 0h4.22v1.7h.06c.59-1.1 2.02-2.26 4.16-2.26 4.45 0 5.27 2.85 5.27 6.55V21h-4.4v-5.86c0-1.4-.03-3.2-1.98-3.2-1.98 0-2.28 1.5-2.28 3.1V21h-4.05V8.5z"></path></svg></span>
+          <div><strong>LinkedIn</strong><span>kaushal-kushwaha-5a250a258</span></div>
+        </a>
+        <a class="contact-link card" href="https://github.com/kk007-ai" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.61-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 015 0c1.9-1.33 2.74-1.05 2.74-1.05.56 1.42.2 2.47.1 2.73.65.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.2 10.2 0 0022 12.2C22 6.58 17.52 2 12 2z"></path></svg></span>
+          <div><strong>GitHub</strong><span>kk007-ai</span></div>
+        </a>
+        <a class="contact-link card" href="https://twitter.com/kaushal_iitj" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.46L23.3 22h-6.83l-5.35-6.99L4.98 22H1.85l7.92-9.05L1 2h7l4.84 6.4L18.9 2zm-1.2 18h1.9L7.4 3.9H5.36L17.7 20z"></path></svg></span>
+          <div><strong>Twitter / X</strong><span>@kaushal_iitj</span></div>
+        </a>
+        <a class="contact-link card" href="https://www.instagram.com/kaushal.iitj/?hl=en" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"></circle></svg></span>
+          <div><strong>Instagram</strong><span>@kaushal.iitj</span></div>
+        </a>
+      </div>
+      <div class="contact-panel card">
+        <h3>Open to opportunities</h3>
+        <p>Middleware engineering roles, integration architecture consulting, or IBM MQ / ACE / Kafka projects — including international opportunities with visa sponsorship. New Delhi based, open to relocation.</p>
+        <a class="btn btn-primary magnetic" href="mailto:kaushal.iitj29@gmail.com" style="display:inline-flex;">Send Me an Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <a class="logo" href="#hero">kaushal<span>://</span>forge</a>
+    <div class="footer-social">
+      <a href="mailto:kaushal.iitj29@gmail.com" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></a>
+      <a href="https://www.linkedin.com/in/kaushal-kushwaha-5a250a258" target="_blank" rel="noopener" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-.02-4 2 2 0 01.02 4zM4.75 8.5h4.4V21h-4.4V8.5zm7.1 0h4.22v1.7h.06c.59-1.1 2.02-2.26 4.16-2.26 4.45 0 5.27 2.85 5.27 6.55V21h-4.4v-5.86c0-1.4-.03-3.2-1.98-3.2-1.98 0-2.28 1.5-2.28 3.1V21h-4.05V8.5z"></path></svg></a>
+      <a href="https://github.com/kk007-ai" target="_blank" rel="noopener" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.61-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 015 0c1.9-1.33 2.74-1.05 2.74-1.05.56 1.42.2 2.47.1 2.73.65.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.2 10.2 0 0022 12.2C22 6.58 17.52 2 12 2z"></path></svg></a>
+      <a href="https://twitter.com/kaushal_iitj" target="_blank" rel="noopener" title="Twitter / X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.46L23.3 22h-6.83l-5.35-6.99L4.98 22H1.85l7.92-9.05L1 2h7l4.84 6.4L18.9 2zm-1.2 18h1.9L7.4 3.9H5.36L17.7 20z"></path></svg></a>
+      <a href="https://www.instagram.com/kaushal.iitj/?hl=en" target="_blank" rel="noopener" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+    </div>
+    <p id="year">© 2026 Kaushal Kushwaha. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ASK KAUSHAL: AI-inspired guided Q&A widget -->
+<button id="askToggle" type="button" aria-label="Open guided Q&A about Kaushal" aria-expanded="false" aria-controls="askPanel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+</button>
+<div id="askPanel" role="dialog" aria-label="Guided Q&A about Kaushal">
+  <div class="ask-head">
+    <div><b>Ask about Kaushal</b><span>Guided answers · not a live AI</span></div>
+    <button class="ask-close" id="askClose" aria-label="Close">✕</button>
+  </div>
+  <div class="ask-body" id="askBody" aria-live="polite">
+    <div class="ask-msg bot">Hi! I can answer quick questions about Kaushal's experience, stack, and availability. Try a suggestion below, or type your own.</div>
+  </div>
+  <div class="ask-chips" id="askChips">
+    <button class="ask-chip" type="button" data-q="achievement">Biggest achievement?</button>
+    <button class="ask-chip" type="button" data-q="stack">Tech stack?</button>
+    <button class="ask-chip" type="button" data-q="relocate">Open to relocation?</button>
+    <button class="ask-chip" type="button" data-q="ai">Exploring AI?</button>
+  </div>
+  <div class="ask-input-row">
+    <input id="askInput" type="text" placeholder="Type a question…" autocomplete="off">
+    <button class="ask-send" id="askSend" type="button">Send</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script>
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isTouch = window.matchMedia('(hover: none)').matches;
+
+/* ---------- Boot loader ---------- */
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  const minTime = reduceMotion ? 0 : 1500;
+  setTimeout(() => loader.classList.add('hidden'), minTime);
+});
+// Safety: never let the loader block content for more than 3s even if load event stalls
+setTimeout(() => document.getElementById('loader')?.classList.add('hidden'), 3000);
+
+/* ---------- Mobile nav ---------- */
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+navToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+/* ---------- Footer year ---------- */
+document.getElementById('year').textContent = '© ' + new Date().getFullYear() + ' Kaushal Kushwaha. All rights reserved.';
+
+/* ---------- Scroll progress ---------- */
+const progressBar = document.getElementById('scrollProgress');
+function updateScrollProgress(){
+  const h = document.documentElement;
+  const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  progressBar.style.width = pct + '%';
+}
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+/* ---------- Custom cursor ---------- */
+if (!isTouch && !reduceMotion){
+  document.body.classList.add('custom-cursor-active');
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  const spotlight = document.getElementById('cursorSpotlight');
+  let mx=0, my=0, rx=0, ry=0;
+  window.addEventListener('mousemove', (e) => {
+    mx=e.clientX; my=e.clientY; dot.style.left=mx+'px'; dot.style.top=my+'px';
+    if (spotlight){
+      spotlight.style.setProperty('--spot-x', mx+'px');
+      spotlight.style.setProperty('--spot-y', my+'px');
+      spotlight.classList.add('active');
+    }
+  });
+  window.addEventListener('mouseleave', () => spotlight?.classList.remove('active'));
+  function loop(){ rx += (mx-rx)*0.18; ry += (my-ry)*0.18; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); }
+  loop();
+  document.querySelectorAll('a, button, .card, .tag, .cmd-item').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+  });
+} else {
+  document.getElementById('cursorDot')?.remove();
+  document.getElementById('cursorRing')?.remove();
+  document.getElementById('cursorSpotlight')?.remove();
+}
+
+/* ---------- Card tilt (3D perspective hover) ---------- */
+if (!isTouch && !reduceMotion){
+  document.querySelectorAll('.tilt').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const r = card.getBoundingClientRect();
+      const px = e.clientX - r.left, py = e.clientY - r.top;
+      const rx = ((py / r.height) - 0.5) * -8;
+      const ry = ((px / r.width) - 0.5) * 10;
+      card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(4px)`;
+      card.style.setProperty('--tilt-px', px + 'px');
+      card.style.setProperty('--tilt-py', py + 'px');
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+}
+
+/* ---------- Reveal on scroll ---------- */
+const revealTargets = document.querySelectorAll('section:not(.hero):not(.story-section) .wrap > *, .hero-overlay > *');
+revealTargets.forEach((el, i) => { el.classList.add('reveal'); el.style.transitionDelay = (i % 6) * 0.05 + 's'; });
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); } });
+}, { threshold: 0.12 });
+revealTargets.forEach(el => io.observe(el));
+if (reduceMotion){ revealTargets.forEach(el => el.classList.add('in')); }
+
+/* ---------- Hero heading word reveal ---------- */
+(function(){
+  const h = document.getElementById('heroHeading');
+  if (!h) return;
+  setTimeout(() => h.classList.add('in'), 300);
+})();
+
+/* ---------- Stat count-up ---------- */
+function animateCount(el){
+  const target = parseFloat(el.dataset.count);
+  const suffix = el.dataset.suffix || '';
+  const prefix = el.dataset.prefix || '';
+  const isFloat = target % 1 !== 0;
+  if (reduceMotion){ el.textContent = prefix + target + suffix; return; }
+  const duration = 1400; const start = performance.now();
+  function tick(now){
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    const val = target * eased;
+    el.textContent = prefix + (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const statEls = document.querySelectorAll('.stat b[data-count]');
+const statIO = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting){ animateCount(entry.target); statIO.unobserve(entry.target); } });
+}, { threshold: 0.4 });
+statEls.forEach(el => statIO.observe(el));
+
+/* ---------- Proficiency bars ---------- */
+const barEls = document.querySelectorAll('.prof-row .bar i');
+const barIO = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting){ entry.target.style.width = entry.target.dataset.width + '%'; barIO.unobserve(entry.target); } });
+}, { threshold: 0.4 });
+barEls.forEach(el => barIO.observe(el));
+
+/* ---------- Hero role typewriter ---------- */
+(function typewriter(){
+  const el = document.getElementById('roleTyper');
+  if (!el) return;
+  const roles = ['IBM MQ Developer','Middleware & Integration Engineer','IBM ACE v12 / IIB v10 Specialist','AI & Data Science Grad Student — IIT Jodhpur','AI & Cloud Enthusiast'];
+  if (reduceMotion){ el.textContent = roles[0]; return; }
+  let roleIndex = 0, charIndex = roles[0].length, deleting = false;
+  function tick(){
+    const current = roles[roleIndex];
+    if (!deleting){ charIndex++; if (charIndex > current.length){ deleting = true; setTimeout(tick, 1400); return; } }
+    else { charIndex--; if (charIndex < 0){ deleting = false; roleIndex = (roleIndex + 1) % roles.length; charIndex = 0; } }
+    el.textContent = current.slice(0, charIndex);
+    setTimeout(tick, deleting ? 28 : 55);
+  }
+  setTimeout(tick, 2200);
+})();
+
+/* ---------- Live Ops Console (sparklines + gauge + system grid + incident sim) ---------- */
+(function dashboard(){
+  function randPath(points, min, max){ let vals=[]; let v=(min+max)/2; for(let i=0;i<points;i++){ v+=(Math.random()-0.5)*(max-min)*0.35; v=Math.max(min,Math.min(max,v)); vals.push(v);} return vals; }
+  function toPoints(vals,w,h){ return vals.map((v,i)=>(i/(vals.length-1)*w).toFixed(1)+','+(h-v*h).toFixed(1)).join(' '); }
+  const s1 = document.getElementById('spark1'), s2 = document.getElementById('spark2');
+  if (s1) s1.setAttribute('points', toPoints(randPath(14,0.15,0.95),100,26));
+  if (s2) s2.setAttribute('points', toPoints(randPath(14,0.2,0.8),100,26));
+  const gauge = document.getElementById('gaugeRing');
+  const gaugeIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting || !gauge) return;
+      gaugeIO.disconnect();
+      const full = 169.6, target = full*0.999;
+      if (reduceMotion){ gauge.setAttribute('stroke-dashoffset', full-target); return; }
+      let start=null;
+      function anim(ts){ if(!start) start=ts; const p=Math.min((ts-start)/1200,1); const eased=1-Math.pow(1-p,3); gauge.setAttribute('stroke-dashoffset', full-(target)*eased); if(p<1) requestAnimationFrame(anim); }
+      requestAnimationFrame(anim);
+    });
+  }, { threshold: 0.4 });
+  if (gauge) gaugeIO.observe(gauge);
+
+  const throughputEl = document.getElementById('metricThroughput'), latencyEl = document.getElementById('metricLatency');
+  if (!reduceMotion){
+    setInterval(() => {
+      if (document.hidden) return;
+      const t=(1.0+Math.random()*0.06).toFixed(2), l=Math.round(38+Math.random()*10);
+      if (throughputEl) throughputEl.textContent = t+'M';
+      if (latencyEl) latencyEl.textContent = l+'ms';
+      if (s1) s1.setAttribute('points', toPoints(randPath(14,0.15,0.95),100,26));
+      if (s2) s2.setAttribute('points', toPoints(randPath(14,0.2,0.8),100,26));
+    }, 2600);
+  }
+
+  /* Session uptime ticker */
+  const uptimeEl = document.getElementById('dashUptime');
+  if (uptimeEl){
+    const bootTime = Date.now();
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function tickUptime(){
+      const s = Math.floor((Date.now()-bootTime)/1000);
+      uptimeEl.textContent = `${pad(Math.floor(s/3600))}:${pad(Math.floor((s%3600)/60))}:${pad(s%60)}`;
+    }
+    tickUptime();
+    setInterval(tickUptime, 1000);
+  }
+
+  /* System status grid — gentle metric jitter to feel alive */
+  const sysCards = document.querySelectorAll('.sys-card');
+  if (!reduceMotion && sysCards.length){
+    setInterval(() => {
+      if (document.hidden) return;
+      sysCards.forEach(card => {
+        if (card.classList.contains('warn')) return; // don't jitter mid-incident, handled by sim
+        const metricEl = card.querySelector('[data-metric]');
+        if (!metricEl) return;
+        const kind = metricEl.dataset.metric;
+        if (kind === 'depth') metricEl.textContent = Math.max(1, Math.round(8 + (Math.random()-0.5)*8));
+        else if (kind === 'flows') metricEl.textContent = Math.round(14 + Math.random()*3);
+        else if (kind === 'lag') metricEl.textContent = (0.1 + Math.random()*0.4).toFixed(1)+'s';
+      });
+    }, 3400);
+  }
+
+  /* Ambient heartbeat log — makes the console feel continuously live, not just on-demand */
+  const log = document.getElementById('dashLog');
+  let incidentRunning = false;
+  const heartbeatLines = [
+    'Channel CHL.PAY.02 heartbeat OK',
+    'Queue depth nominal on QM.PROD.01',
+    'ACE.INT.01 flow health check passed — 15 flows active',
+    'Kafka consumer group lag within threshold',
+    'Certificate validity check passed — 118 days remaining',
+    'Backup Queue Manager sync verified',
+    'Grafana dashboard refresh — no anomalies detected',
+  ];
+  if (!reduceMotion && log){
+    setInterval(() => {
+      if (document.hidden || incidentRunning) return;
+      const text = heartbeatLines[Math.floor(Math.random()*heartbeatLines.length)];
+      const line = document.createElement('div');
+      line.className = 'log-line';
+      line.textContent = text;
+      log.appendChild(line); log.scrollTop = log.scrollHeight;
+      while (log.children.length > 6) log.removeChild(log.firstChild);
+    }, 6500);
+  }
+
+  /* Incident simulation — now visibly flips QM.PROD.03's status card, not just the log */
+  const btn = document.getElementById('incidentBtn');
+  const qm3 = document.querySelector('.sys-card[data-sys="qm3"]');
+  if (btn && log){
+    btn.addEventListener('click', () => {
+      btn.disabled = true; incidentRunning = true; log.innerHTML = '';
+      const qm3Status = qm3?.querySelector('[data-status]');
+      const qm3Metric = qm3?.querySelector('[data-metric]');
+      const steps = [
+        { t:0, warn:true, text:'<b>ALERT</b> — latency spike detected on QM.PROD.03' },
+        { t:500, warn:false, text:'Auto-scaling triggered · rerouting via secondary channel' },
+        { t:1050, warn:false, text:'RCA bridge convened · root cause isolated to connection pool exhaustion' },
+        { t:1600, warn:false, text:'<b>Resolved</b> — SLA maintained, MTTR: 4m 12s' }
+      ];
+      steps.forEach(step => {
+        setTimeout(() => {
+          const line = document.createElement('div');
+          line.className = 'log-line' + (step.warn ? ' warn' : '');
+          line.innerHTML = step.text;
+          log.appendChild(line); log.scrollTop = log.scrollHeight;
+
+          if (step.text.includes('ALERT')){
+            qm3?.classList.add('warn');
+            if (qm3Status) qm3Status.textContent = 'Degraded';
+            if (qm3Metric) qm3Metric.textContent = Math.round(40 + Math.random()*20);
+          }
+          if (step.text.includes('Resolved')){
+            qm3?.classList.remove('warn');
+            if (qm3Status) qm3Status.textContent = 'Healthy';
+            if (qm3Metric) qm3Metric.textContent = Math.round(6 + Math.random()*4);
+          }
+          if (step === steps[steps.length-1]) setTimeout(() => {
+            btn.disabled = false; incidentRunning = false;
+            const rc = document.getElementById('resolvedCount');
+            if (rc) rc.textContent = (parseInt(rc.textContent, 10) || 0) + 1;
+          }, 500);
+        }, step.t);
+      });
+    });
+  }
+})();
+
+/* ---------- Architecture in motion (diagram <-> tab sync + live pulse sim) ---------- */
+(function archDiagram(){
+  const svg = document.querySelector('.arch-svg');
+  const tabs = document.querySelectorAll('.arch-tab');
+  const nodes = document.querySelectorAll('.arch-node');
+  const panels = document.querySelectorAll('[data-arch-panel]');
+  if (!svg || !tabs.length) return;
+
+  if (reduceMotion && typeof svg.pauseAnimations === 'function'){
+    try { svg.pauseAnimations(); } catch(e) {}
+  }
+
+  function setActive(key){
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.node === key));
+    nodes.forEach(n => n.classList.toggle('active', n.dataset.node === key));
+    panels.forEach(p => p.classList.toggle('active', p.dataset.archPanel === key));
+  }
+  tabs.forEach(tab => tab.addEventListener('click', () => setActive(tab.dataset.node)));
+  nodes.forEach(node => {
+    node.addEventListener('click', () => setActive(node.dataset.node));
+    node.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); setActive(node.dataset.node); } });
+  });
+
+  /* Live arrival pulses — mirrors the timing of the SVG animateMotion dots so a
+     node visibly "lights up" the instant a simulated message reaches it. */
+  if (!reduceMotion){
+    const counterEl = document.getElementById('archCounter');
+    let count = 0;
+    function bumpCounter(){
+      count++;
+      if (counterEl) counterEl.textContent = count.toLocaleString();
+    }
+    function pulseNode(key){
+      const node = document.querySelector(`.arch-node[data-node="${key}"] .arch-node-box`);
+      if (!node) return;
+      node.classList.remove('pulse');
+      void node.offsetWidth; // restart animation
+      node.classList.add('pulse');
+      bumpCounter();
+    }
+    // { target node, animation duration ms, begin offset ms } — matches the <animateMotion> tags above
+    const flows = [
+      { to: 'mq', dur: 1800, begin: 0 },
+      { to: 'mq', dur: 1800, begin: 900 },
+      { to: 'ace', dur: 1600, begin: 300 },
+      { to: 'ace', dur: 1600, begin: 1100 },
+      { to: 'kafka', dur: 1600, begin: 600 },
+      { to: 'kafka', dur: 1600, begin: 1400 },
+      { to: 'consumers', dur: 1800, begin: 200 },
+      { to: 'consumers', dur: 1800, begin: 1000 },
+      { to: 'kafka', dur: 4200, begin: 0 },
+      { to: 'kafka', dur: 4200, begin: 2100 },
+    ];
+    flows.forEach(flow => {
+      setTimeout(() => {
+        pulseNode(flow.to);
+        setInterval(() => pulseNode(flow.to), flow.dur);
+      }, flow.begin);
+    });
+  }
+})();
+
+/* ---------- Magnetic buttons ---------- */
+(function(){
+  if (reduceMotion || isTouch) return;
+  document.querySelectorAll('.magnetic').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const r = btn.getBoundingClientRect();
+      const x = (e.clientX - r.left - r.width/2) * 0.25, y = (e.clientY - r.top - r.height/2) * 0.35;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+})();
+
+/* ---------- Tilt effect on cards ---------- */
+(function(){
+  if (reduceMotion || isTouch) return;
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX-r.left)/r.width-0.5, y = (e.clientY-r.top)/r.height-0.5;
+      card.style.transform = `perspective(700px) rotateX(${(-y*4).toFixed(2)}deg) rotateY(${(x*4).toFixed(2)}deg) translateY(-2px)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+})();
+
+/* ---------- Generic tab groups ---------- */
+function wireTabs(tabSelector, panelSelector, tabAttr, panelAttr){
+  const tabs = document.querySelectorAll(tabSelector), panels = document.querySelectorAll(panelSelector);
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active')); panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector(panelSelector + '[' + panelAttr + '="' + tab.dataset[tabAttr] + '"]')?.classList.add('active');
+    });
+  });
+}
+wireTabs('.insight-tab', '.insight-panel', 'tab', 'data-panel');
+wireTabs('.exp-tab', '.exp-panel', 'exp', 'data-exp-panel');
+
+/* ---------- Copy to clipboard ---------- */
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const val = btn.dataset.copy;
+    try { await navigator.clipboard.writeText(val); }
+    catch(e){ const ta=document.createElement('textarea'); ta.value=val; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); }
+    const original = btn.textContent; btn.textContent = 'Copied ✓'; btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1600);
+  });
+});
+
+/* ---------- STORY SPINE: scroll-hijacked horizontal narrative ---------- */
+(function storySpine(){
+  const section = document.getElementById('story');
+  const track = document.getElementById('storyTrack');
+  const fill = document.getElementById('storyProgressFill');
+  const railStages = document.querySelectorAll('#storyRail .rail-stage');
+  const stageOrder = ['produce','queue','transform','route','deliver'];
+  if (!section || !track || reduceMotion) return;
+  const panelCount = document.querySelectorAll('.story-panel').length;
+
+  function update(){
+    const rect = section.getBoundingClientRect();
+    const total = section.offsetHeight - window.innerHeight;
+    let progress = total > 0 ? (-rect.top) / total : 0;
+    progress = Math.max(0, Math.min(1, progress));
+    track.style.transform = `translateX(-${progress * (panelCount - 1) * 100}vw)`;
+    if (fill) fill.style.width = (progress * 100) + '%';
+    const stageIndex = Math.min(panelCount - 1, Math.round(progress * (panelCount - 1)));
+    railStages.forEach((el, i) => el.classList.toggle('active', i === stageIndex && rect.top < window.innerHeight && rect.bottom > 0));
+  }
+  window.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+
+/* ---------- Command palette ---------- */
+(function commandPalette(){
+  const overlay = document.getElementById('cmdOverlay'), input = document.getElementById('cmdInput'), list = document.getElementById('cmdList'), trigger = document.getElementById('cmdTrigger');
+  const commands = [
+    { label: 'Go to Story', tag: 'section', action: () => scrollToId('story') },
+    { label: 'Go to Developer Profile', tag: 'section', action: () => scrollToId('dev-profile') },
+    { label: 'Go to About', tag: 'section', action: () => scrollToId('about') },
+    { label: 'Go to Achievements', tag: 'section', action: () => scrollToId('achievements') },
+    { label: 'Go to Experience', tag: 'section', action: () => scrollToId('experience') },
+    { label: 'Go to Skills', tag: 'section', action: () => scrollToId('skills') },
+    { label: 'Go to Data & AI Insights', tag: 'section', action: () => scrollToId('insights') },
+    { label: 'Go to Certifications', tag: 'section', action: () => scrollToId('certifications') },
+    { label: 'Go to Projects', tag: 'section', action: () => scrollToId('projects') },
+    { label: 'Go to Education', tag: 'section', action: () => scrollToId('education') },
+    { label: 'Go to Contact', tag: 'section', action: () => scrollToId('contact') },
+    { label: 'Copy Email Address', tag: 'action', action: () => copyText('kaushal.iitj29@gmail.com') },
+    { label: 'Download Résumé', tag: 'link', action: () => window.open('resume.pdf', '_blank') },
+    { label: 'Open LinkedIn', tag: 'link', action: () => window.open('https://www.linkedin.com/in/kaushal-kushwaha-5a250a258', '_blank') },
+    { label: 'Open GitHub', tag: 'link', action: () => window.open('https://github.com/kk007-ai', '_blank') },
+    { label: 'Open Twitter / X', tag: 'link', action: () => window.open('https://twitter.com/kaushal_iitj', '_blank') },
+    { label: 'Open Instagram', tag: 'link', action: () => window.open('https://www.instagram.com/kaushal.iitj/?hl=en', '_blank') },
+    { label: 'Ask a Question (open guided Q&A)', tag: 'action', action: () => { closePalette(); document.getElementById('askToggle').click(); } },
+    { label: 'Send an Email', tag: 'action', action: () => window.location.href = 'mailto:kaushal.iitj29@gmail.com' },
+  ];
+  function scrollToId(id){ closePalette(); document.getElementById(id)?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' }); }
+  function copyText(val){ navigator.clipboard?.writeText(val).catch(()=>{}); closePalette(); }
+  let activeIndex = 0;
+  function render(filter){
+    const q = (filter||'').toLowerCase();
+    const filtered = commands.filter(c => c.label.toLowerCase().includes(q));
+    list.innerHTML = '';
+    if (!filtered.length){ list.innerHTML = '<div class="cmd-empty">No matching commands</div>'; list._filtered=[]; return; }
+    filtered.forEach((c,i) => {
+      const item = document.createElement('div');
+      item.className = 'cmd-item' + (i===activeIndex ? ' active' : '');
+      item.innerHTML = '<span>'+c.label+'</span><span class="tag">'+c.tag+'</span>';
+      item.addEventListener('click', c.action);
+      item.addEventListener('mouseenter', () => { activeIndex=i; render(input.value); });
+      list.appendChild(item);
+    });
+    list._filtered = filtered;
+  }
+  function openPalette(){ overlay.classList.add('open'); input.value=''; activeIndex=0; render(''); setTimeout(()=>input.focus(),10); }
+  function closePalette(){ overlay.classList.remove('open'); }
+  trigger.addEventListener('click', openPalette);
+  overlay.addEventListener('click', (e) => { if (e.target===overlay) closePalette(); });
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey||e.ctrlKey) && e.key.toLowerCase()==='k'){ e.preventDefault(); overlay.classList.contains('open') ? closePalette() : openPalette(); }
+    if (e.key==='Escape') closePalette();
+    if (!overlay.classList.contains('open')) return;
+    const filtered = list._filtered || [];
+    if (e.key==='ArrowDown'){ e.preventDefault(); activeIndex=Math.min(activeIndex+1, filtered.length-1); render(input.value); }
+    if (e.key==='ArrowUp'){ e.preventDefault(); activeIndex=Math.max(activeIndex-1, 0); render(input.value); }
+    if (e.key==='Enter'){ e.preventDefault(); filtered[activeIndex]?.action(); }
+  });
+  input.addEventListener('input', () => { activeIndex=0; render(input.value); });
+})();
+
+/* ---------- Ask Kaushal: guided Q&A (AI-inspired UI, rule-based) ---------- */
+(function askKaushal(){
+  const toggle = document.getElementById('askToggle'), panel = document.getElementById('askPanel'), closeBtn = document.getElementById('askClose');
+  const body = document.getElementById('askBody'), input = document.getElementById('askInput'), sendBtn = document.getElementById('askSend'), chips = document.getElementById('askChips');
+
+  const answers = {
+    achievement: "Kaushal's headline metric: 99.9% SLA compliance with zero data loss, processing 1M+ messages/day across 12+ BFSI production applications at TCS.",
+    stack: "Core stack: IBM MQ 9.2, IBM ACE v12 / IIB v10, Apache Kafka, GCP & AWS, Python, Bash, Jenkins/Docker/Kubernetes. Currently deepening AI and Data Science via an M.Tech at IIT Jodhpur.",
+    relocate: "Yes — open to relocation internationally, including via visa sponsorship (482 TSS pathway). Based in New Delhi, India.",
+    ai: "Yes — actively exploring Data Engineering and Generative AI, backed by an M.Tech at IIT Jodhpur, Databricks certifications, and a Google Cloud Generative AI Leader credential. See the 'Where I'm headed' section for details.",
+    experience: "4+ years as a Middleware & Integration Developer at Tata Consultancy Services (TCS), since May 2022.",
+    contact: "Best reached by email at kaushal.iitj29@gmail.com, or via the command palette (⌘K) → 'Send an Email'. LinkedIn, GitHub, Twitter/X, and Instagram links are in the Contact section.",
+    education: "M.Tech in AI and Data Science at IIT Jodhpur, and a B.Tech in Electrical Engineering from IET, MJP Rohilkhand University.",
+    certifications: "11 verified certifications spanning IBM middleware (MQ, ACE, DataPower), Apache Kafka, Linux, Google Cloud, and Databricks — all linked with verification URLs in the Certifications section.",
+  };
+  function match(q){
+    q = q.toLowerCase();
+    if (/(achiev|sla|metric|impact|result)/.test(q)) return answers.achievement;
+    if (/(stack|tech|skill|tool|language)/.test(q)) return answers.stack;
+    if (/(reloc|visa|sponsor|international|move|relocate)/.test(q)) return answers.relocate;
+    if (/(\bai\b|machine learning|\bml\b|generative|llm|data engineer)/.test(q)) return answers.ai;
+    if (/(experience|years|tcs|current role|job)/.test(q)) return answers.experience;
+    if (/(contact|email|reach|phone|linkedin)/.test(q)) return answers.contact;
+    if (/(education|degree|iit|college|university|study)/.test(q)) return answers.education;
+    if (/(cert|credential|badge)/.test(q)) return answers.certifications;
+    return "I don't have a canned answer for that — but you can reach Kaushal directly at kaushal.iitj29@gmail.com, or open the command palette (⌘K) to jump anywhere on the site.";
+  }
+  function addMsg(text, cls){
+    const div = document.createElement('div'); div.className = 'ask-msg ' + cls; div.textContent = text;
+    body.appendChild(div); body.scrollTop = body.scrollHeight;
+  }
+  function respond(question){
+    addMsg(question, 'user');
+    const typing = document.createElement('div'); typing.className = 'ask-typing'; typing.innerHTML = '<i></i><i></i><i></i>';
+    body.appendChild(typing); body.scrollTop = body.scrollHeight;
+    setTimeout(() => {
+      typing.remove();
+      addMsg(match(question), 'bot');
+    }, 600 + Math.random()*400);
+  }
+  function openPanel(){ panel.classList.add('open'); toggle.setAttribute('aria-expanded','true'); setTimeout(()=>input.focus(), 200); }
+  function closePanel(){ panel.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
+  toggle.addEventListener('click', () => panel.classList.contains('open') ? closePanel() : openPanel());
+  closeBtn.addEventListener('click', closePanel);
+  chips.addEventListener('click', (e) => {
+    const chip = e.target.closest('.ask-chip'); if (!chip) return;
+    respond(chip.textContent);
+  });
+  sendBtn.addEventListener('click', () => { const v = input.value.trim(); if (!v) return; respond(v); input.value=''; });
+  input.addEventListener('keydown', (e) => { if (e.key==='Enter'){ sendBtn.click(); } });
+})();
+
+/* ---------- Hero WebGL particle network (Three.js) ---------- */
+(function heroScene(){
+  const canvas = document.getElementById('heroCanvas');
+  const heroSection = document.getElementById('hero');
+  if (!canvas || !heroSection) return;
+  if (reduceMotion || typeof window.THREE === 'undefined'){
+    // Fallback: static gradient handled by CSS .hero background; nothing else needed.
+    return;
+  }
+
+  function init(){
+    const THREE = window.THREE;
+    let width = heroSection.clientWidth, height = heroSection.clientHeight;
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setSize(width, height);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(55, width/height, 0.1, 100);
+    camera.position.z = 13;
+
+    const NODE_COUNT = window.innerWidth < 700 ? 45 : 90;
+    const positions = new Float32Array(NODE_COUNT * 3);
+    const velocities = [];
+    for (let i=0; i<NODE_COUNT; i++){
+      positions[i*3] = (Math.random()-0.5) * 18;
+      positions[i*3+1] = (Math.random()-0.5) * 10;
+      positions[i*3+2] = (Math.random()-0.5) * 8;
+      velocities.push({ x:(Math.random()-0.5)*0.004, y:(Math.random()-0.5)*0.004, z:(Math.random()-0.5)*0.002 });
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    const material = new THREE.PointsMaterial({ color: 0x2fe7c2, size: 0.06, transparent: true, opacity: 0.85 });
+    const points = new THREE.Points(geometry, material);
+    scene.add(points);
+
+    const lineGeometry = new THREE.BufferGeometry();
+    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x2fe7c2, transparent: true, opacity: 0.12 });
+    const lineSegments = new THREE.LineSegments(lineGeometry, lineMaterial);
+    scene.add(lineSegments);
+
+    const MAX_DIST = 3.2;
+    function updateLines(){
+      const linePositions = [];
+      for (let i=0; i<NODE_COUNT; i++){
+        for (let j=i+1; j<NODE_COUNT; j++){
+          const dx = positions[i*3]-positions[j*3], dy = positions[i*3+1]-positions[j*3+1], dz = positions[i*3+2]-positions[j*3+2];
+          const dist = Math.sqrt(dx*dx+dy*dy+dz*dz);
+          if (dist < MAX_DIST){
+            linePositions.push(positions[i*3],positions[i*3+1],positions[i*3+2], positions[j*3],positions[j*3+1],positions[j*3+2]);
+          }
+        }
+      }
+      lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
+    }
+    updateLines();
+
+    let targetRotX = 0, targetRotY = 0;
+    window.addEventListener('mousemove', (e) => {
+      targetRotY = (e.clientX / window.innerWidth - 0.5) * 0.3;
+      targetRotX = (e.clientY / window.innerHeight - 0.5) * 0.2;
+    });
+
+    let frame = 0;
+    let running = true;
+    document.addEventListener('visibilitychange', () => { running = !document.hidden; });
+
+    function animate(){
+      if (!running){ requestAnimationFrame(animate); return; }
+      frame++;
+      for (let i=0; i<NODE_COUNT; i++){
+        positions[i*3] += velocities[i].x; positions[i*3+1] += velocities[i].y; positions[i*3+2] += velocities[i].z;
+        if (Math.abs(positions[i*3]) > 9) velocities[i].x *= -1;
+        if (Math.abs(positions[i*3+1]) > 5) velocities[i].y *= -1;
+        if (Math.abs(positions[i*3+2]) > 4) velocities[i].z *= -1;
+      }
+      geometry.attributes.position.needsUpdate = true;
+      if (frame % 4 === 0) updateLines();
+
+      points.rotation.y += (targetRotY - points.rotation.y) * 0.02 + 0.0008;
+      points.rotation.x += (targetRotX - points.rotation.x) * 0.02;
+      lineSegments.rotation.copy(points.rotation);
+
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+      width = heroSection.clientWidth; height = heroSection.clientHeight;
+      camera.aspect = width/height; camera.updateProjectionMatrix();
+      renderer.setSize(width, height);
+    });
+  }
+
+  if (document.readyState === 'complete') init();
+  else window.addEventListener('load', init);
+})();
+</script>
+</body>
+</html>
